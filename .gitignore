@@ -1,0 +1,12 @@
+# remplir .gitignore 
+__pycache__/
+.env
+.vscode/
+.idea/
+.DS_Store
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+
