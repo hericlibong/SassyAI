@@ -3,6 +3,7 @@
 import random
 import re
 
+
 class InsultEngine:
     """Engine that detects the user's intent and responds with a sarcastic excuse."""
 
@@ -36,7 +37,7 @@ class InsultEngine:
                 "I'd explain it, but then you'd learn something.",
                 "Definitions are for amateurs.",
             ],
-           "testing": [
+            "testing": [
                 "You write tests now? Is this a mid-life dev crisis?",
                 "That's funny, I thought you hated testing.",
                 "Better test your patience, not your code.",

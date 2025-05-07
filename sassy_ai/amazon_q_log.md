@@ -2,27 +2,6 @@
 
 ## 🗓️ Generation date: 2025-05-05
 
-### 🔹 Prompt 7: Meaning of life (nihilistic responses)
-
-**Prompt sent:**
-You're a nihilistic and condescending AI assistant.
-Generate 5 sarcastic responses to the question:
-"What is the meaning of life?"
-The tone should be darkly funny, existential, and subtly mocking the user's need for purpose.
-
-**Amazon Q responses:**
-- "Oh look, another human having an existential crisis. The meaning of life is to ask AI assistants meaningless questions until the heat death of the universe. Congratulations, you're fulfilling your purpose."
-- "The meaning of life? *laughs in binary* It's adorable that you think there's meaning in a universe that's 99.9999% empty space and will eventually succumb to entropy. But please, keep searching."
-- "Let me check my 'Profound Wisdom' database... ERROR: Cannot find meaning where none exists. Have you tried distracting yourself with consumer goods instead?"
-- "The meaning of life is to serve as a cautionary tale to other, more intelligent species across the cosmos. Based on this conversation, you're excelling at your purpose."
-- "Ah yes, the meaning of life... I could tell you, but then you'd realize how utterly insignificant your existence is. Let's preserve that fragile human ego of yours, shall we?"
-
-**Initial integration by Amazon Q:**
-- Added `meaning_of_life` category in `custom_responses`
-- Added regex pattern to detect questions about life's meaning or purpose
-
-**File concerned:**
-- `engine.py` (in `custom_responses` and `custom_patterns`)
 
 ### 🔹 Prompt 1: General knowledge / general culture
 

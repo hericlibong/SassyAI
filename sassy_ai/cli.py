@@ -3,6 +3,7 @@
 import click
 from responses import get_sarcastic_reply
 
+
 @click.command()
 def chat():
     """Launches a sarcastic conversation with SassyAI."""
@@ -21,6 +22,7 @@ def chat():
         except (KeyboardInterrupt, EOFError):
             click.secho("\n\nSassyAI: Rage quitting? How mature.\n", fg="red")
             break
+
 
 if __name__ == "__main__":
     chat()
