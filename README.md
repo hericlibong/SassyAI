@@ -1,4 +1,4 @@
-```markdown
+
 # SassyAI - The Judgy Assistant
 
 ## Introduction
@@ -12,7 +12,7 @@ SassyAI is a sarcastic assistant designed to answer questions with snarky and ir
 * Interactive command-line session with built-in commands to change themes, display help and exit the session.
 * Reflection effect with random messages to simulate an AI in processing.
 * Various output messages to keep the interaction light and fun.
-```
+
 
 ## Installation
 
