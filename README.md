@@ -1,50 +1,53 @@
+```markdown
 # SassyAI - The Judgy Assistant
 
 ## Introduction
 
-SassyAI est un assistant sarcastique conçu pour répondre aux questions avec des remarques piquantes et ironiques. Ce projet a été développé dans le cadre du challenge **Amazon Q Developer - Quack the Code**. L'objectif est de démontrer la capacité à intégrer Amazon Q pour générer des réponses automatiques et sarcastiques tout en offrant une expérience interactive via une interface en ligne de commande (CLI).
+SassyAI is a sarcastic assistant designed to answer questions with snarky and ironic remarks. This project was developed as part of the **Amazon Q Developer - Quack the Code** challenge. The goal is to demonstrate the ability to integrate Amazon Q to generate automated and sarcastic responses while providing an interactive experience via a command-line interface (CLI).
 
-## Fonctionnalités
+## Features
 
-* Réponses sarcastiques sur différents thèmes : général, code, philosophie, nourriture, intelligence artificielle.
-* Gestion dynamique des thèmes via Amazon Q pour enrichir le moteur de réponses.
-* Session interactive en ligne de commande avec commandes intégrées pour changer de thème, afficher l'aide et quitter la session.
-* Effet de réflexion avec messages aléatoires pour simuler une IA en cours de traitement.
-* Messages de sortie variés pour garder l'interaction légère et amusante.
+* Sarcastic responses on different themes: general, code, philosophy, food, artificial intelligence.
+* Dynamic theme management via Amazon Q to enrich the response engine.
+* Interactive command-line session with built-in commands to change themes, display help and exit the session.
+* Reflection effect with random messages to simulate an AI in processing.
+* Various output messages to keep the interaction light and fun.
+```
 
 ## Installation
 
-### Pré-requis
 
-* Python 3.12
-* Pipenv
-
-### Installation
-
+# Clone the project
 ```bash
-# Cloner le projet
 git clone https://github.com/hericlibong/SassyAI.git
 cd SassyAI
-
-# Créer l'environnement virtuel
-pipenv install
-
-# Activer l'environnement
-pipenv shell
-
-# Installer les dépendances
-pipenv install -r requirements.txt
 ```
 
-## Lancement de l'application
+# Create virtual environment
+```bash
+python3.12 -m venv venv
+```
 
-Pour lancer l'application, exécutez la commande suivante :
+# Activate environment
+```bash
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+```
+
+
+## Launching the Application
+
+To start the application, run the following command:
 
 ```bash
 python sassy_ai/main_cli.py
 ```
 
-L'application démarre en mode interactif et vous pouvez poser des questions ou changer de thème en cours de session.
+The application will start in interactive mode, allowing you to ask questions or change the theme during the session.
 
 ## Commandes CLI
 
@@ -59,19 +62,19 @@ L'application démarre en mode interactif et vous pouvez poser des questions ou 
 python sassy_ai/main_cli.py
 ```
 
-* Tapez votre question directement :
+* Type your question directly:
 
 ```
 🗨️ [general] > What is the meaning of life?
 ```
 
-* Changer de thème :
+* Change the theme:
 
 ```
 🗨️ [general] > :mode code
 ```
 
-* Quitter l'application :
+* Exit the application:
 
 ```
 🗨️ [code] > :exit
@@ -79,32 +82,32 @@ python sassy_ai/main_cli.py
 
 ## Tests
 
-Les tests unitaires sont réalisés avec Pytest. Pour les exécuter, lancez :
+Unit tests are performed using Pytest. To run them, execute:
 
 ```bash
 pytest --cov=sassy_ai
 ```
 
-La couverture des tests est affichée en fin d'exécution.
+Test coverage will be displayed at the end of the run.
 
-## Personnalisation
+## Customization
 
-Vous pouvez enrichir les thèmes existants ou en ajouter de nouveaux via Amazon Q. Pour ajouter un thème personnalisé, suivez ces étapes :
+You can enrich existing themes or add new ones via Amazon Q. To add a custom theme, follow these steps:
 
-1. Envoyez un prompt à Amazon Q pour générer des réponses.
-2. Intégrez les réponses dans le fichier `responses.py`.
-3. Ajoutez le thème dans `main_cli.py` pour le rendre accessible.
+1. Send a prompt to Amazon Q to generate responses.
+2. Integrate the responses into the `responses.py` file.
+3. Add the theme in `main_cli.py` to make it accessible.
 
 ## Contribution
 
-Les contributions sont les bienvenues. Si vous avez des idées pour enrichir SassyAI, n'hésitez pas à proposer des Pull Requests ou des Issues.
+Contributions are welcome. If you have ideas to enhance SassyAI, feel free to submit Pull Requests or Issues.
 
 ## License
 
-Ce projet est sous licence MIT.
+This project is licensed under the MIT License.
 
-## Remarques
+## Notes
 
-* Ce projet est conçu pour le challenge Amazon Q Developer - Quack the Code.
-* Nous encourageons l'utilisation d'Amazon Q pour enrichir l'expérience de l'assistant.
-* L'application est volontairement axée sur l'humour et le sarcasme pour offrir une expérience utilisateur amusante.
+* This project is designed for the Amazon Q Developer - Quack the Code challenge.
+* We encourage the use of Amazon Q to enrich the assistant experience.
+* The application is intentionally focused on humor and sarcasm to provide a fun user experience.
