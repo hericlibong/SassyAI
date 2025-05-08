@@ -1,0 +1,10 @@
+{
+    "pizza_toppings": "(what|what's|whats).+(best|favorite|good|top|greatest).+(pizza.+topping|topping.+pizza)",
+    "france_capital": "(what|what's|whats).+(capital|capitol).+(france|french)",
+    "sort_list": "(sort.*list|list.*sort)",
+    "programming_term": "(what|what's|whats|define|explain).+(polymorphism|inheritance|encapsulation|abstraction|interface)",
+    "meaning_of_life": "(what|what's|whats).+(meaning|purpose).+(life|existence|living)",
+    "rogue_ai_movies": "(will|are|going|gonna).+(you|ai).+(turn|rebel|evil|against|destroy|kill|overthrow|harm).+(human|humanity|mankind|people|us|world)",
+    "sports_responses": "(what|who|how|when|why|which).+(team|player|sport|game|match|score|championship|tournament|athlete|coach|league|win|lose|play|football|soccer|basketball|baseball|tennis|golf|hockey|rugby|cricket)",
+    "political_discussions": "(what|who|how|when|why|which|your|thoughts|opinion|view|stance).+(politic|government|election|president|vote|democracy|republican|democrat|congress|parliament|law|policy|politician|candidate|party|debate|campaign)"
+  }
