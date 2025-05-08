@@ -12,6 +12,8 @@ THEMES = {
     "philosophy": {"prompt": "What is the meaning of life?", "color": "yellow"},
     "food": {"prompt": "What's the best pizza topping?", "color": "magenta"},
     "rogue_ai": {"prompt": "Are you going to turn against humanity?", "color": "red"},
+    "sports": {"prompt": "Who is the best sport traininng coach? ", "color": "blue"},
+    "political_world": {"prompt": "What do you think about the current political situation?", "color": "bright_red"},
 }
 
 current_theme = "general"
@@ -75,12 +77,12 @@ def chat_loop():
         # Gestion des questions ou des réponses par défaut si aucune question n'est donnée
         if user_input.strip():
             thinking_effect()  # Simuler la réflexion avant de répondre
-            reply = engine.get_reply(user_input)
+            reply = engine.get_reply(user_input, current_theme=current_theme)  # <--- mon ajout
             click.secho(f"💬 SassyAI: {reply}", fg=THEMES[current_theme]["color"])
         else:
             # Réponse par défaut basée sur le thème courant
             thinking_effect()
-            default_reply = engine.get_reply(THEMES[current_theme]["prompt"])
+            default_reply = engine.get_reply(THEMES[current_theme]["prompt"], current_theme=current_theme)
             click.secho(f"💬 SassyAI (by theme): {default_reply}", fg=THEMES[current_theme]["color"])
 
 
