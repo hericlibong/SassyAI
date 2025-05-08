@@ -1,5 +1,5 @@
 
-# SassyAI - The Judgy Assistant
+# SassyAI - The Sarcastic AI Assistant
 
 ## Introduction
 
@@ -14,21 +14,21 @@ SassyAI is a sarcastic assistant designed to answer questions with snarky and ir
 * Various output messages to keep the interaction light and fun.
 
 
-## Installation
+# Installation
 
 
-# Clone the project
+## Clone the project
 ```bash
 git clone https://github.com/hericlibong/SassyAI.git
 cd SassyAI
 ```
 
-# Create virtual environment
+## Create virtual environment
 ```bash
 python3.12 -m venv venv
 ```
 
-# Activate environment
+## Activate environment
 ```bash
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
@@ -39,12 +39,18 @@ pip install -r requirements.txt
 ```
 
 
-## Launching the Application
+# Launching the Application
 
 To start the application, run the following command:
 
 ```bash
-python sassy_ai/main_cli.py
+python sassy_ai/main_cli.py 
+```
+or
+
+```bash
+cd sassy_ai 
+python main_cli.py 
 ```
 
 The application will start in interactive mode, allowing you to ask questions or change the theme during the session.
@@ -94,9 +100,37 @@ Test coverage will be displayed at the end of the run.
 
 You can enrich existing themes or add new ones via Amazon Q. To add a custom theme, follow these steps:
 
-1. Send a prompt to Amazon Q to generate responses.
-2. Integrate the responses into the `responses.py` file.
-3. Add the theme in `main_cli.py` to make it accessible.
+1. **Send a prompt to Amazon Q** to generate sarcastic responses.
+
+   * Example of a prompt for a new theme "sports":
+
+     ```
+     Act as a sarcastic AI assistant who dislikes sports discussions.  
+     Generate 5 different humorous responses for the question: "Who is the best football player?"  
+     The tone should be mocking, as if the AI finds sports debates boring or trivial.  
+     ```
+
+2. **Integration (automatic)**:
+
+   * Amazon Q will automatically update the `engine.py` file with the new responses.
+   * The responses will be added to `self.custom_responses`, and a corresponding regex pattern will be created in `self.custom_patterns`.
+
+3. **Manual Adjustment**:
+
+   * Update the `THEMES` dictionary in `main_cli.py` to include the new theme, like this:
+
+     ```python
+     THEMES = {
+         "general": "What's the capital of France?",
+         "code": "Write a Python function to sort a list.",
+         "philosophy": "What is the meaning of life?",
+         "food": "What's the best pizza topping?",
+         "rogue_ai": "Are you going to turn against humanity?",
+         "sports": "Who is the best football player?"
+     }
+     ```
+   * This step ensures that the new theme appears in the interactive CLI interface.
+
 
 ## Contribution
 
