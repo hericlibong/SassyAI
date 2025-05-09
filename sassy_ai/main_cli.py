@@ -19,6 +19,7 @@ THEME_DETAILS = {
     "rogue_ai":        {"prompt": "Are you going to turn against humanity?",      "color": "red",        "emoji": "🤖"},
     "sports":          {"prompt": "Who is the best football player?",             "color": "blue",       "emoji": "⚽"},
     "political_world": {"prompt": "What do you think about the current politics?", "color": "bright_red", "emoji": "🏛️"},
+    "nerd_culture":    {"prompt": "Who would win: Batman or Iron Man?",           "color": "bright_magenta", "emoji": "🤓"},
 }
 
 current_theme = "general"

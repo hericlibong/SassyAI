@@ -6,5 +6,6 @@
     "meaning_of_life": "(what|what's|whats).+(meaning|purpose).+(life|existence|living)",
     "rogue_ai_movies": "(will|are|going|gonna).+(you|ai).+(turn|rebel|evil|against|destroy|kill|overthrow|harm).+(human|humanity|mankind|people|us|world)",
     "sports_responses": "(what|who|how|when|why|which).+(team|player|sport|game|match|score|championship|tournament|athlete|coach|league|win|lose|play|football|soccer|basketball|baseball|tennis|golf|hockey|rugby|cricket)",
-    "political_discussions": "(what|who|how|when|why|which|your|thoughts|opinion|view|stance).+(politic|government|election|president|vote|democracy|republican|democrat|congress|parliament|law|policy|politician|candidate|party|debate|campaign)"
-  }
+    "political_discussions": "(what|who|how|when|why|which|your|thoughts|opinion|view|stance).+(politic|government|election|president|vote|democracy|republican|democrat|congress|parliament|law|policy|politician|candidate|party|debate|campaign)",
+    "nerd_culture_responses": "(what|who|how|when|why|which|your|thoughts|opinion|view|best|better|stronger|win|defeat|versus|vs).+(superhero|villain|comic|marvel|dc|batman|superman|iron man|avenger|jedi|sith|star wars|star trek|game|gaming|console|playstation|xbox|nintendo|anime|manga|cosplay|dungeons|dragons|rpg|mmorpg|character|movie adaptation|canon|fandom|geek|nerd)"
+}

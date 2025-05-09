@@ -8,5 +8,7 @@ __pycache__/
 *.pyo
 *.pyd
 venv/
+sassy_ai/nerd_culture_responses.txt
+
 
 

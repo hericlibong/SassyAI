@@ -258,7 +258,7 @@ Make the tone funny, self-aware, and lightly threatening—as if the AI finds th
 - `engine.py` (in `custom_responses` and `custom_patterns`)
 
 
-### 📝 **Mise à jour du fichier `amazon_q_log.md` pour le prompt "sports"**
+### 📝 **Update of the `amazon_q_log.md` file for the "sports" prompt**
 
 ---
 
@@ -478,6 +478,23 @@ Ensure that the new responses are correctly linked to the theme.
 The political theme prompt confirms that **Amazon Q has learned from previous corrections**. The automated integration is now consistent and follows the intended structure. We can confidently move forward with testing new themes or enhancing the current ones.
 
 
+### 🔹 Prompt 3: Nerd Culture
+
+**Prompt sent**
+Act as a sarcastic AI assistant who loves nerd culture but mocks it at the same time…
+(Tone: playful snark, self-aware nerd pride)
+
+**Amazon Q actions**
+1. Inserted "nerd_culture_responses" with 5 replies in responses.json
+2. Added regex to patterns.json:
+   "(comic|manga|anime|super ?hero|star wars|star trek|video game|console|cosplay|tabletop)"
+3. Updated theme_to_intent in engine.py:
+   "nerd_culture" ➜ "nerd_culture_responses"
+4. Added theme block in main_cli.py (prompt, color bright_magenta, emoji 🤓)
+5. Generated a redundant helper file `nerd_culture_responses.txt` (ignored)
+
+**Result**
+CLI command `:mode nerd_culture` now returns snarky geek replies. All tests pass.
 
 
 

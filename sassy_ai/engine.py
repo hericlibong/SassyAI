@@ -28,7 +28,8 @@ class InsultEngine:
         "code": "code_request",
         "general": "general_knowledge",
         "sports": "sports_responses",
-        "political_world": "political_discussions"
+        "political_world": "political_discussions",
+        "nerd_culture": "nerd_culture_responses"
         }
         self._last_reply = None
 
@@ -98,23 +99,21 @@ class InsultEngine:
             if any(w in p for w in words) and key in sub_dict:
                 return sub_dict[key]
         return sub_dict.get("general", sum(sub_dict.values(), []))
-
-
-    def _select_sport_pool(self, sub_dict: dict, prompt: str) -> list[str]:
-        """Choisit la bonne sous-catégorie dans sports_responses."""
+    
+    def _select_nerd_pool(self, sub_dict: dict, prompt: str) -> list[str]:
+        """Choisit la sous-catégorie appropriée pour nerd_culture."""
         p = prompt.lower()
         mapping = {
-            "football":  ["football", "soccer", "nfl", "touchdown", "super bowl"],
-            "basketball":["basketball", "nba", "dunk", "hoop", "court"],
-            "baseball":  ["baseball", "mlb", "bat", "pitch", "home run"],
-            "athletes":  ["athlete", "player", "star", "champion", "mvp"],
-            "practice":  ["practice", "training", "workout", "exercise", "drill"],
+            "gaming": ["game", "gaming", "playstation", "xbox", "nintendo", "steam"],
+            "comics": ["comic", "superhero", "marvel", "dc", "batman", "superman", "iron man"],
+            "sci-fi": ["star wars", "star trek", "sci-fi", "space", "galaxy", "laser"],
+            "anime": ["anime", "manga", "cosplay", "otaku", "japan", "animation"],
         }
-        for key, words in mapping.items():
-            if any(w in p for w in words) and key in sub_dict:
+        for key, keywords in mapping.items():
+            if any(w in p for w in keywords) and key in sub_dict:
                 return sub_dict[key]
-        # défaut : liste « general » ou concaténation de toutes les listes
         return sub_dict.get("general", sum(sub_dict.values(), []))
+
 
 
     def get_reply(self, prompt: str, current_theme: str = "general") -> str:
@@ -125,6 +124,11 @@ class InsultEngine:
         if intent == "sports_responses":
             sports_dict = self.responses["custom_responses"]["sports_responses"]
             return self._pick_without_repeat(self._select_sport_pool(sports_dict, prompt))
+        
+        # 0️⃣  Cas où l'intention détectée est le bloc nerd_culture (avec sous-cat.)
+        if intent == "nerd_culture_responses":
+            nerd_dict = self.responses["custom_responses"]["nerd_culture_responses"]
+            return self._pick_without_repeat(self._select_nerd_pool(nerd_dict, prompt))
 
         # 1️⃣  Intention trouvée dans custom_responses
         if intent in self.responses["custom_responses"]:
@@ -143,8 +147,9 @@ class InsultEngine:
             if isinstance(pool, dict):                       # peut être sports_responses
                 if mapped_intent == "sports_responses":      # sous-catégories sport
                     return self._pick_without_repeat(self._select_sport_pool(pool, prompt))
-                return self._pick_without_repeat(pool.get("general",
-                                                        sum(pool.values(), [])))
+                if mapped_intent == "nerd_culture_responses":
+                    return self._pick_without_repeat(self._select_nerd_pool(pool, prompt))
+                return self._pick_without_repeat(pool.get("general",sum(pool.values(), [])))
             return self._pick_without_repeat(pool)
 
         # 2-b  Thème courant pointe vers standard_responses
