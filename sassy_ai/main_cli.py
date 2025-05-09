@@ -1,24 +1,30 @@
-# main_cli.py
-import click
-import time
+# main_cli.py  – CLI améliorée avec Rich
 import random
+import time
+import click
+from rich.console import Console
+from rich.progress import Progress, SpinnerColumn, TextColumn
+
 from engine import InsultEngine
 
 engine = InsultEngine()
+console = Console()
 
-THEMES = {
-    "general": {"prompt": "What's the capital of France?", "color": "cyan"},
-    "code": {"prompt": "Write a Python function to sort a list.", "color": "green"},
-    "philosophy": {"prompt": "What is the meaning of life?", "color": "yellow"},
-    "food": {"prompt": "What's the best pizza topping?", "color": "magenta"},
-    "rogue_ai": {"prompt": "Are you going to turn against humanity?", "color": "red"},
-    "sports": {"prompt": "Who is the best sport traininng coach? ", "color": "blue"},
-    "political_world": {"prompt": "What do you think about the current political situation?", "color": "bright_red"},
+# ──────────────────────────────────────────
+THEME_DETAILS = {
+    "general":         {"prompt": "What's the capital of France?",                "color": "cyan",       "emoji": "💡"},
+    "code":            {"prompt": "Write a Python function to sort a list.",      "color": "green",      "emoji": "💻"},
+    "philosophy":      {"prompt": "What is the meaning of life?",                 "color": "yellow",     "emoji": "🧠"},
+    "food":            {"prompt": "What's the best pizza topping?",               "color": "magenta",    "emoji": "🍕"},
+    "rogue_ai":        {"prompt": "Are you going to turn against humanity?",      "color": "red",        "emoji": "🤖"},
+    "sports":          {"prompt": "Who is the best football player?",             "color": "blue",       "emoji": "⚽"},
+    "political_world": {"prompt": "What do you think about the current politics?", "color": "bright_red", "emoji": "🏛️"},
 }
 
 current_theme = "general"
+theme_usage = {key: 0 for key in THEME_DETAILS}  # compteur de stats
 
-# Messages de sortie variés
+# ──────────────────────────────────────────
 exit_messages = [
     "👋 Bye, human. Try not to break anything while I'm gone.",
     "🚪 Exiting... Don't pretend you're not sad to see me go.",
@@ -27,7 +33,6 @@ exit_messages = [
     "🛑 Ending session... I hope you learned something. Unlikely.",
 ]
 
-# Messages de réflexion (thinking)
 thinking_messages = [
     "🤔 Let me ponder on that...",
     "💭 Just a moment, I’m processing this nonsense...",
@@ -36,86 +41,108 @@ thinking_messages = [
     "😏 Oh, you're making me think? Bold move.",
 ]
 
-# Variations du prompt
-prompt_variations = [
-    " You > ",
-    " Tell me: ",
-    " Speak up: ",
-    " Your move: ",
-]
+prompt_variations = [" You > ", " Tell me: ", " Speak up: ", " Your move: "]
 
 
+# ──────────────────────────────────────────
 def thinking_effect():
-    """Simuler une réflexion avec un message aléatoire et un délai."""
-    message = random.choice(thinking_messages)
-    click.secho(message, fg="yellow")
-    time.sleep(random.uniform(0.5, 1.5))  # Délai aléatoire pour simuler la réflexion
+    """Animation de réflexion avec Rich."""
+    msg = random.choice(thinking_messages)
+    with Progress(
+        SpinnerColumn(style="yellow"),
+        TextColumn("[progress.description]{task.description}"),
+        transient=True,
+        console=console,
+    ) as progress:
+        progress.add_task(description=msg, total=None)
+        time.sleep(random.uniform(0.7, 1.6))
 
 
+# ──────────────────────────────────────────
 @click.command()
 def chat_loop():
-    """Boucle interactive pour interagir avec SassyAI."""
-    click.secho("🎉 Welcome to SassyAI — The Judgy Assistant", fg="cyan")
-    click.secho("🤖 Type ':themes' if you need to see available themes.", fg="blue")
-    click.secho("🤖 Type ':mode <theme>' to change theme.", fg="blue")
-    click.secho("💡 Type ':help' to see available commands.", fg="yellow")
-    click.secho(f"🤖 Current theme: {current_theme}\n", fg=THEMES[current_theme]["color"])
+    console.print("🎉 [bold cyan]Welcome to SassyAI — The Judgy Assistant[/]")
+    console.print("🤖 Type ':themes' for list, ':mode <theme>' to switch, ':help' for help.", style="blue")
+    show_current_theme_banner()
 
     while True:
-        # Variation aléatoire du prompt
         prompt_suffix = random.choice(prompt_variations)
-        # Récupérer la question ou commande de l'utilisateur
         user_input = click.prompt(
-            f"🗨️ [{current_theme}]", prompt_suffix=prompt_suffix, show_default=False
+            f"{THEME_DETAILS[current_theme]['emoji']} [{current_theme}]", prompt_suffix=prompt_suffix, show_default=False
         )
 
-        # Gérer les commandes spéciales
         if user_input.startswith(":"):
-            process_command(user_input)
+            process_command(user_input.strip())
             continue
 
-        # Gestion des questions ou des réponses par défaut si aucune question n'est donnée
         if user_input.strip():
-            thinking_effect()  # Simuler la réflexion avant de répondre
-            reply = engine.get_reply(user_input, current_theme=current_theme)  # <--- mon ajout
-            click.secho(f"💬 SassyAI: {reply}", fg=THEMES[current_theme]["color"])
-        else:
-            # Réponse par défaut basée sur le thème courant
             thinking_effect()
-            default_reply = engine.get_reply(THEMES[current_theme]["prompt"], current_theme=current_theme)
-            click.secho(f"💬 SassyAI (by theme): {default_reply}", fg=THEMES[current_theme]["color"])
+            reply = engine.get_reply(user_input, current_theme=current_theme)
+            theme_usage[current_theme] += 1
+            console.print(f"💬 {THEME_DETAILS[current_theme]['emoji']} [bold {THEME_DETAILS[current_theme]['color']}]SassyAI:[/] {reply}")
+        else:
+            thinking_effect()
+            default_reply = engine.get_reply(THEME_DETAILS[current_theme]["prompt"], current_theme=current_theme)
+            console.print(f"💬 {THEME_DETAILS[current_theme]['emoji']} [bold {THEME_DETAILS[current_theme]['color']}]SassyAI:[/] {default_reply}")
 
 
-def process_command(command):
-    """Gérer les commandes spéciales."""
+# ──────────────────────────────────────────
+def show_current_theme_banner():
+    emoji = THEME_DETAILS[current_theme]["emoji"]
+    color = THEME_DETAILS[current_theme]["color"]
+    console.rule(f"{emoji} [bold {color}]Current theme: {current_theme}[/]")
+
+
+def process_command(command: str):
     global current_theme
 
     if command == ":help":
-        click.secho("📝 Available commands:", fg="cyan")
-        click.echo(" - :help         Show this help message")
-        click.echo(" - :themes       Show available themes")
-        click.echo(" - :mode <theme> Change the current theme")
-        click.echo(" - :exit         Exit the application")
+        console.print("📝 [bold cyan]Available commands:[/]")
+        console.print("  • :help     Show this help message")
+        console.print("  • :themes   List available themes")
+        console.print("  • :mode <theme>  Switch current theme")
+        console.print("  • :random   Switch to a random theme")
+        console.print("  • :stats    Show theme usage statistics")
+        console.print("  • :info     Show info about current theme")
+        console.print("  • :exit     Exit the application")
+
     elif command == ":themes":
-        click.secho("🧩 Available themes:", fg="cyan")
-        for key in THEMES:
-            theme_indicator = "✅" if key == current_theme else " "
-            click.secho(f" {theme_indicator} {key}", fg=THEMES[key]["color"])
+        console.print("🧩 [bold cyan]Available themes:[/]")
+        for key in THEME_DETAILS:
+            mark = "✅" if key == current_theme else " "
+            console.print(f" {mark} {THEME_DETAILS[key]['emoji']} {key}", style=THEME_DETAILS[key]["color"])
+
     elif command.startswith(":mode "):
         theme = command.split(" ")[1]
-        if theme in THEMES:
+        if theme in THEME_DETAILS:
             current_theme = theme
-            click.secho(f"🍕 Theme changed to: {theme}", fg=THEMES[current_theme]["color"])
+            show_current_theme_banner()
         else:
-            click.secho("❌ Unknown theme. Use ':themes' to see available ones.", fg="red")
+            console.print("❌ Unknown theme. Use ':themes' to see available ones.", style="red")
+
+    elif command == ":random":
+        current_theme = random.choice(list(THEME_DETAILS.keys()))
+        show_current_theme_banner()
+
+    elif command == ":stats":
+        console.print("📊 [bold cyan]Theme usage stats:[/]")
+        for theme, count in theme_usage.items():
+            console.print(f"{THEME_DETAILS[theme]['emoji']} {theme}: {count}", style=THEME_DETAILS[theme]["color"])
+
+    elif command == ":info":
+        details = THEME_DETAILS[current_theme]
+        console.print(f"{details['emoji']} [bold]{current_theme}[/] theme info:")
+        console.print(f"• Default prompt : [italic]{details['prompt']}[/]")
+        console.print(f"• Color          : {details['color']}")
+
     elif command == ":exit":
-        # Afficher un message de sortie aléatoire
-        exit_message = random.choice(exit_messages)
-        click.secho(exit_message, fg="cyan")
-        exit()
+        console.print(random.choice(exit_messages), style="cyan")
+        raise SystemExit
+
     else:
-        click.secho("❗ Unknown command. Type ':help' for assistance.", fg="red")
+        console.print("❗ Unknown command. Type ':help' for assistance.", style="red")
 
 
+# ──────────────────────────────────────────
 if __name__ == "__main__":
     chat_loop()
