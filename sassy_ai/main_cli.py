@@ -12,21 +12,20 @@ console = Console()
 
 # ──────────────────────────────────────────
 THEME_DETAILS = {
-    "general":         {"prompt": "What's the capital of France?",                "color": "cyan",       "emoji": "💡"},
-    "code":            {"prompt": "Write a Python function to sort a list.",      "color": "green",      "emoji": "💻"},
-    "philosophy":      {"prompt": "What is the meaning of life?",                 "color": "yellow",     "emoji": "🧠"},
-    "food":            {"prompt": "What's the best pizza topping?",               "color": "magenta",    "emoji": "🍕"},
-    "rogue_ai":        {"prompt": "Are you going to turn against humanity?",      "color": "red",        "emoji": "🤖"},
-    "sports":          {"prompt": "Who is the best football player?",             "color": "blue",       "emoji": "⚽"},
+    "general": {"prompt": "What's the capital of France?", "color": "cyan", "emoji": "💡"},
+    "code": {"prompt": "Write a Python function to sort a list.", "color": "green", "emoji": "💻"},
+    "philosophy": {"prompt": "What is the meaning of life?", "color": "yellow", "emoji": "🧠"},
+    "food": {"prompt": "What's the best pizza topping?", "color": "magenta", "emoji": "🍕"},
+    "rogue_ai": {"prompt": "Are you going to turn against humanity?", "color": "red", "emoji": "🤖"},
+    "sports": {"prompt": "Who is the best football player?", "color": "blue", "emoji": "⚽"},
     "political_world": {"prompt": "What do you think about the current politics?", "color": "bright_red", "emoji": "🏛️"},
-    "nerd_culture":    {"prompt": "Who would win: Batman or Iron Man?",           "color": "bright_magenta", "emoji": "🤓"},
-    "dark_humor":      {"prompt": "What happens after we die?",                   "color": "bright_black", "emoji": "💀"},
-    "tv_series":       {"prompt": "What's the best TV show of all time?",         "color": "bright_cyan", "emoji": "📺"},
+    "nerd_culture": {"prompt": "Who would win: Batman or Iron Man?", "color": "bright_magenta", "emoji": "🤓"},
+    "dark_humor": {"prompt": "What happens after we die?", "color": "bright_black", "emoji": "💀"},
+    "tv_series": {"prompt": "What's the best TV show of all time?", "color": "bright_cyan", "emoji": "📺"},
 }
 
 current_theme = "general"
-theme_usage = {key: 0 for key in THEME_DETAILS}  # compteur de stats
-
+theme_usage = {key: 0 for key in THEME_DETAILS}  # stats counter
 # ──────────────────────────────────────────
 exit_messages = [
     "👋 Bye, human. Try not to break anything while I'm gone.",
@@ -49,7 +48,7 @@ prompt_variations = [" You > ", " Tell me: ", " Speak up: ", " Your move: "]
 
 # ──────────────────────────────────────────
 def thinking_effect():
-    """Animation de réflexion avec Rich."""
+    """Displays a thinking animation using Rich."""
     msg = random.choice(thinking_messages)
     with Progress(
         SpinnerColumn(style="yellow"),

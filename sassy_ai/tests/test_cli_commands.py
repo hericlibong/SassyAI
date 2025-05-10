@@ -3,7 +3,7 @@
 import pytest
 from click.testing import CliRunner
 from sassy_ai.main_cli import chat_loop
-from sassy_ai.main_cli import exit_messages, THEMES
+from sassy_ai.main_cli import exit_messages, THEME_DETAILS
 
 
 @pytest.fixture
@@ -28,7 +28,7 @@ def test_themes_command(runner):
     result = runner.invoke(chat_loop, input=":themes\n:exit\n")
     assert result.exit_code == 0
     assert "🧩 Available themes:" in result.output
-    for theme in THEMES.keys():
+    for theme in THEME_DETAILS.keys():
         assert theme in result.output
 
 
@@ -36,7 +36,7 @@ def test_change_theme_valid(runner):
     """Test changing theme to a valid option."""
     result = runner.invoke(chat_loop, input=":mode philosophy\n:exit\n")
     assert result.exit_code == 0
-    assert "🍕 Theme changed to: philosophy" in result.output
+    assert "Current theme: philosophy" in result.output
 
 
 def test_change_theme_invalid(runner):

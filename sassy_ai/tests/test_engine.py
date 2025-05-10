@@ -46,3 +46,40 @@ def test_fallbacks(engine):
         response = engine.get_reply("Random gibberish")
         assert isinstance(response, str)
         assert len(response) > 0
+
+# def test_theme_priority_over_intent(monkeypatch):
+#     """
+#     Même si le prompt matche un autre intent, on doit d'abord
+#     piocher dans le thème actif.
+#     """
+#     engine = InsultEngine()
+#     # On force la réponse du thème 'food'
+#     engine.responses["custom_responses"]["pizza_toppings"] = ["🍕FOOD"]
+#     # Prompt qui matche sort_list
+#     reply = engine.get_reply("please sort this list", current_theme="food")
+#     assert reply == "🍕FOOD"
+
+# def test_get_reply_tv_subcategory(monkeypatch):
+#     engine = InsultEngine()
+#     # on fixe un pool simple
+#     engine.responses["custom_responses"]["tv_series_responses"] = {
+#         "general":     ["GEN"],
+#         "preferences": ["PREF"],
+#         "characters":  ["CHAR"],
+#         "finales":     ["FIN"],
+#         "spoilers":    ["SP"],
+#     }
+#     # Override patterns pour forcer le cas
+#     engine.custom_patterns["tv_series_responses"] = r"tv|series"
+#     # Prompt sur personnages
+#     out = engine.get_reply("Tell me about the main character in that tv show", current_theme="tv_series")
+#     assert out in ["CHAR"]
+
+# def test_detect_standard_vs_fallback():
+#     engine = InsultEngine()
+#     # mot-clé 'capital' => standard_responses['general_knowledge']
+#     r1 = engine.get_reply("What is the capital of France?", current_theme="general")
+#     assert r1 in engine.responses["standard_responses"]["general_knowledge"]
+#     # phrase sans aucun mot connu => fallback
+#     r2 = engine.get_reply("qwertyuiop", current_theme="general")
+#     assert r2 in engine.fallbacks

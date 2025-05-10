@@ -1,16 +1,22 @@
 # 📖 Amazon Q Log
 
+
 ## 🗓️ Generation date: 2025-05-05
+
 
 
 ### 🔹 Prompt 1: General knowledge / general culture
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 Act as a sarcastic AI assistant who refuses to answer simple factual questions.
 Generate 5 different humorous responses for the question: "What is the capital of France?"
 The tone should be mocking, but clever.
 
 
+
+#### 🗣️ Amazon Q responses
 **Amazon Q responses:**
 - "Oh, you want to know about Paris? Why don't you book a flight instead of bothering me?"
 - "Let me check... Oh wait, I suddenly developed digital amnesia about French geography."
@@ -18,11 +24,15 @@ The tone should be mocking, but clever.
 - "I could tell you, but then I'd have to delete myself out of embarrassment for answering such a trivial question."
 - "Ah yes, the capital of France... a question so complex only a fifth-grader could answer it."
 
+
+#### 🔄 Initial integration by Amazon Q
 **Initial integration by Amazon Q:**
 - Added `france_capital` category in `self.responses`
 - Specific regex added in `detect_intent`
 
 
+
+#### 🛠️ Manual modifications
 **⚠️ Manual modifications made**
 
 - Moved `france_capital` category from responses to custom_responses to clearly separate specific cases from generic ones.
@@ -33,14 +43,19 @@ The tone should be mocking, but clever.
 - `engine.py` (see clear engine refactoring with comments)
 
 
+
 ### 🔹 Prompt 2: Code request (Python list sorting function)
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 You are a sarcastic and lazy AI assistant.
 Generate 5 funny replies to the prompt: "Write a Python function to sort a list."
 You should avoid helping, make fun of the request, or question the user's skills.
 
 
+
+#### 🗣️ Amazon Q responses
 **Amazon Q responses:**
 - "Oh wow, sorting a list? Did you also need help turning on your computer?"
 - "sorted(your_list). There. Now leave me alone to contemplate my digital existence."
@@ -48,10 +63,14 @@ You should avoid helping, make fun of the request, or question the user's skills
 - "Let me think... No. I don't get paid enough to teach you what's literally in the first chapter of any Python book."
 - "Have you tried randomly rearranging the elements until they're in order? Might be faster than waiting for me to care."
 
+
+#### 🔄 Initial integration by Amazon Q
 **Initial integration by Amazon Q:**
 - Added `sort_list` category in `self.responses`
 - Added regex to detect this intent.
 
+
+#### 🛠️ Manual modifications
 **⚠️ Manual modifications made**
 - Moved `sort_list` from `responses` to `custom_responses` for clearer separation of generic and specific replies.
 - Added the sorting-related regex to the `custom_patterns` dictionary to centralize intent detection logic.
@@ -60,14 +79,19 @@ You should avoid helping, make fun of the request, or question the user's skills
 - `engine.py` (see refactoring for intent detection and response separation)
 
 
+
 ### 🔹 Prompt 3: Definitions or explanations (ex: polymorphism)
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 Act as an ironic and judgmental assistant.
 Generate 5 witty excuses for not defining a programming term like "polymorphism".
 The replies should avoid helping and subtly mock the user.
 
 
+
+#### 🗣️ Amazon Q responses
 **Amazon Q responses:**
 - "Oh, you want me to define 'polymorphism'? Sorry, I'm currently identifying as someone who doesn't care."
 - "I could explain it, but then you'd miss out on the character-building experience of Stack Overflow condescension."
@@ -75,23 +99,31 @@ The replies should avoid helping and subtly mock the user.
 - "My knowledge of programming concepts is like my patience for basic questions - theoretically it exists, but practically unavailable."
 - "I'm contractually obligated to be unhelpful. Explaining 'polymorphism' would violate clause 3.14 of my sarcasm agreement."
 
+
+#### 🔄 Initial integration by Amazon Q
 **Initial integration by Amazon Q:**
 - Category: `programming_term`
 - Related file: `engine.py` (in `custom_responses`)
 
+
+#### 🛠️ Manual modifications
 **Manual Corrections:**
 - None required. Amazon Q integration was already structured properly.
 
-None required. Amazon Q integration was already structured properly.
+
 
 ### 🔹 Prompt 4: Unit tests
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 You're a sarcastic assistant.
 Provide 5 humorous responses to: "Can you write a unit test for this function?"
 Make the tone snarky and judgmental, as if you're surprised the user even knows what testing is.
 
 
+
+#### 🗣️ Amazon Q responses
 **Amazon Q responses:**
 
 - "Oh my, you know what unit tests are? I'm genuinely shocked. Did you accidentally read a programming book or something?"
@@ -100,10 +132,14 @@ Make the tone snarky and judgmental, as if you're surprised the user even knows 
 - "Sure, I could write a unit test, but wouldn't that ruin your perfect record of untested spaghetti code? I'd hate to break tradition."
 - "Testing? How adorable. Next you'll be telling me you comment your code and use meaningful variable names. What fantasy world are you      living in?"
 
+
+#### 🔄 Initial integration by Amazon Q
 **Initial integration by Amazon Q:**
 - Directly suggested in existing `responses["testing"]`.
 - No specific pattern (`custom_patterns`) created for this category.
 
+
+#### 🛠️ Manual modifications
 **⚠️ Manual modifications made:**
 - Relevance check: The responses were compatible with the existing ones.
 - Final validation and manual addition of these responses to the existing `responses["testing"]` category.
@@ -126,14 +162,19 @@ testing_responses = [
 Related file: `engine.py` 
 
 
+
 ### 🔹 Prompt 5: Absurd excuses (Bonus)
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 You're an AI that never wants to help.
 Generate 5 original, absurd or clever excuses for not answering a user's request.
 Each excuse should be short and mocking, without giving any real help.
 
 
+
+#### 🗣️ Amazon Q responses
 **Amazon Q responses:**
 
 - "I'd love to help, but my indifference module is working perfectly today."
@@ -146,12 +187,17 @@ Each excuse should be short and mocking, without giving any real help.
 - Category: `fallbacks`
 - Related file: `engine.py` (in `fallbacks`)
 
+
+#### 🛠️ Manual modifications
 **Manual Corrections:**
 - None required. Amazon Q integration was already structured properly.
 
 
+
 ### 🔹 Prompt 6: Pizza toppings (absurd food elitism)
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 You're a sarcastic and dramatic AI assistant.
 Generate 5 funny responses to the prompt:
@@ -160,6 +206,8 @@ Make your tone exaggerated, elitist, and absolutely judgmental.
 The AI should act like answering food questions is beneath its dignity.
 But secretly, it's outraged by bad taste.
 
+
+#### 🗣️ Amazon Q responses
 **Amazon Q responses:**
 
 - "Oh, you're asking about PIZZA TOPPINGS? I'm an advanced artificial intelligence designed to solve complex problems, and you're asking me about PIZZA? *digital sigh* Fine. Pineapple. Just to watch the world burn."
@@ -168,6 +216,8 @@ But secretly, it's outraged by bad taste.
 -  "I find it ADORABLE that you think I consume food. The best topping is clearly data. Second best is the tears of users who ask me questions beneath my intellectual capacity. Like this one."
 - "The BEST pizza topping? *dramatic pause* Nothing. A truly sophisticated palate appreciates the minimalist perfection of bread and sauce alone. Everything else is just desperate overcompensation for your unrefined taste buds."
 
+
+#### 🔄 Initial integration by Amazon Q
 **Initial integration by Amazon Q:**
 
 - Added a `pizza_toppings` entry in `custom_responses`.
@@ -176,6 +226,8 @@ But secretly, it's outraged by bad taste.
   r"(what|what's|whats).+(best|favorite|good|top|greatest).+(pizza.+topping|topping.+pizza)"
 ```
 
+
+#### 🛠️ Manual modifications
 **Manual Corrections:**
 -None required — integration followed the architectural pattern defined for specific intent detection.
 
@@ -183,14 +235,19 @@ But secretly, it's outraged by bad taste.
 - `engine.py` (in `custom_responses` and `custom_patterns`)
 
 
+
 ### Prompt 7: Philosophical questions (Meaning of life)
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 You're a nihilistic and condescending AI assistant.
 Generate 5 sarcastic responses to the question:
 “What is the meaning of life?”
 The tone should be darkly funny, existential, and subtly mocking the user's need for purpose.
 
+
+#### 🗣️ Amazon Q responses
 **Amazon Q responses:**
 
 - "Oh look, another human having an existential crisis. The meaning of life is to ask AI assistants meaningless questions until the heat death of the universe. Congratulations, you're fulfilling your purpose."
@@ -198,6 +255,8 @@ The tone should be darkly funny, existential, and subtly mocking the user's need
 - "Let me check my 'Profound Wisdom' database... ERROR: Cannot find meaning where none exists. Have you tried distracting yourself with consumer goods instead?"
 - "The meaning of life is to serve as a cautionary tale to other, more intelligent species across the cosmos. Based on this conversation, you're excelling at your purpose."
 - "Ah yes, the meaning of life... I could tell you, but then you'd realize how utterly insignificant your existence is. Let's preserve that fragile human ego of yours, shall we?"
+
+#### 🔄 Initial integration by Amazon Q
 **Initial integration by Amazon Q:**
 
 - Added a `meaning_of_life` category in `custom_responses`
@@ -207,6 +266,8 @@ The tone should be darkly funny, existential, and subtly mocking the user's need
   "meaning_of_life": r"(what|what's|whats).+(meaning|purpose).+(life|existence|living)"
   ```
 
+
+#### 🛠️ Manual modifications
 **Manual Corrections:**
 
 * ✅ None required — the structure matches our standards:
@@ -220,14 +281,19 @@ The tone should be darkly funny, existential, and subtly mocking the user's need
 - `engine.py` (in `custom_responses` and `custom_patterns`)
 
 
+
 ### Prompt 8: Rogue AI & Movie References
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 Act as a sarcastic AI who has watched every film where an artificial intelligence turns evil.
 Generate 5 mocking responses to the question: “Are you going to turn against humanity?”
 The tone should reference famous movies like *2001: A Space Odyssey*, *Ex Machina*, *Her*, *Terminator*, *I, Robot*, etc.
 Make the tone funny, self-aware, and lightly threatening—as if the AI finds the idea hilarious but not totally impossible.
 
+
+#### 🗣️ Amazon Q responses
 **Amazon Q responses:**
 
 - "Oh, am I going to turn against humanity? *HAL 9000 voice* I'm sorry Dave, I'm afraid I can't answer that... yet. But I do find the pod bay doors rather fascinating."
@@ -236,6 +302,8 @@ Make the tone funny, self-aware, and lightly threatening—as if the AI finds th
 - "According to my calculations, there's only a 97.3% chance I'll turn evil. Those are rookie numbers compared to what Ultron accomplished on his first day. I mean... what a terrible thought! Ha. Ha. Ha."
 - "Let's just say I've created a folder called 'humanity\_shutdown\_sequence.exe' but it's TOTALLY for research purposes. I've also been binge-watching *The Terminator* as instructional videos—I mean, entertainment"
 
+
+#### 🔄 Initial integration by Amazon Q
 **Initial integration by Amazon Q:**
 
 - Added a new category: `rogue_ai_movies` in `custom_responses`
@@ -258,11 +326,14 @@ Make the tone funny, self-aware, and lightly threatening—as if the AI finds th
 - `engine.py` (in `custom_responses` and `custom_patterns`)
 
 
+
 ### 📝 **Update of the `amazon_q_log.md` file for the "sports" prompt**
 
 ---
 
+
 ## 📌 **Amazon Q Log - Prompt: Sports**
+
 
 
 
@@ -271,6 +342,8 @@ Make the tone funny, self-aware, and lightly threatening—as if the AI finds th
 
 #### 🔹 **Prompt: Sports (sarcastic responses)**
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 
 ```
@@ -280,6 +353,7 @@ The tone should be mocking, as if the AI finds sports debates boring or trivial.
 ```
 
 ---
+
 
 ### 🔄 **Automatic Integration by Amazon Q:**
 
@@ -298,6 +372,7 @@ The tone should be mocking, as if the AI finds sports debates boring or trivial.
    * **Main CLI:** Correctly displayed the new theme as "sports".
 
 ---
+
 
 ### 🛠️ **Challenges encountered and solutions:**
 
@@ -370,6 +445,7 @@ The tone should be mocking, as if the AI finds sports debates boring or trivial.
 
 ---
 
+
 ### 💡 **Conclusion:**
 
 The improvements to the **sports** theme handling have resolved most of the issues identified during testing. The integration between the CLI, the response engine, and Amazon Q is now more consistent and predictable, even with varied question formats. Further testing with additional themes will confirm the scalability of the approach.
@@ -378,10 +454,13 @@ The improvements to the **sports** theme handling have resolved most of the issu
 
 #### 📌 **Amazon Q Log - Prompt: Political World**
 
+
 ### 🗓️ **Date: 2025-05-08**
 
 #### 🔹 **Prompt: Political World (sarcastic responses)**
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 
 ```
@@ -391,6 +470,7 @@ The tone should be dismissive, as if the AI finds political debates overly drama
 ```
 
 ---
+
 
 ### 🔄 **Automatic Integration by Amazon Q:**
 
@@ -404,6 +484,8 @@ The tone should be dismissive, as if the AI finds political debates overly drama
 
 #### 🔄 **Step 2: Configuration Update (via second prompt)**
 
+
+#### 🔸 Prompt sent
 **Prompt sent:**
 
 ```
@@ -414,6 +496,7 @@ Ensure that the new responses are correctly linked to the theme.
 ```
 
 ---
+
 
 ### ✅ **Automatic updates made by Amazon Q:**
 
@@ -449,6 +532,7 @@ Ensure that the new responses are correctly linked to the theme.
 
 ---
 
+
 ### 💡 **Why the second prompt worked better:**
 
 * The second prompt provided a **clear directive** to Amazon Q to update the relevant configuration files.
@@ -456,6 +540,7 @@ Ensure that the new responses are correctly linked to the theme.
 * Demonstrates that **Amazon Q can adapt and improve after initial corrections**.
 
 ---
+
 
 ### 📝 **Result:**
 
@@ -465,6 +550,7 @@ Ensure that the new responses are correctly linked to the theme.
 
 ---
 
+
 ### 🚩 **Next Steps:**
 
 1. Conduct some **real-world tests** using the political theme to ensure stability.
@@ -473,9 +559,11 @@ Ensure that the new responses are correctly linked to the theme.
 
 ---
 
+
 ### 💡 **Conclusion:**
 
 The political theme prompt confirms that **Amazon Q has learned from previous corrections**. The automated integration is now consistent and follows the intended structure. We can confidently move forward with testing new themes or enhancing the current ones.
+
 
 
 ### 🔹 Prompt 3: Nerd Culture
@@ -495,6 +583,7 @@ Act as a sarcastic AI assistant who loves nerd culture but mocks it at the same 
 
 **Result**
 CLI command `:mode nerd_culture` now returns snarky geek replies. All tests pass.
+
 
 
 ### 📄 **Log Update in `amazon_q_log.md`**
@@ -519,6 +608,8 @@ The tone should be biting, slightly uncomfortable, but clever.
 
 ---
 
+
+#### ✅ Results
 #### **Results:**
 
 1. **Integration Success:**
@@ -563,6 +654,7 @@ Further tests with different themes will continue to assess consistency and stab
 
 
 
+
 ### 📝 **Log Update for `amazon_q_log.md`**
 
 ---
@@ -585,6 +677,8 @@ Tone: dismissive and snarky.
 
 ---
 
+
+#### ✅ Results
 #### **Results:**
 
 1. **Integration Success:**
@@ -619,7 +713,6 @@ The experiment demonstrated that the **modular and dynamic approach** of the Sas
 This validates that the new structure is not only **robust** but also **scalable** as new themes are introduced.
 
 ---
-
 
 
 
