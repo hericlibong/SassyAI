@@ -5,7 +5,39 @@
     "programming_term": "(what|what's|whats|define|explain).+(polymorphism|inheritance|encapsulation|abstraction|interface)",
     "meaning_of_life": "(what|what's|whats).+(meaning|purpose).+(life|existence|living)",
     "rogue_ai_movies": "(will|are|going|gonna).+(you|ai).+(turn|rebel|evil|against|destroy|kill|overthrow|harm).+(human|humanity|mankind|people|us|world)",
-    "sports_responses": "(what|who|how|when|why|which).+(team|player|sport|game|match|score|championship|tournament|athlete|coach|league|win|lose|play|football|soccer|basketball|baseball|tennis|golf|hockey|rugby|cricket)",
+    
+    "dark_humor_responses": "(what|who|how|when|why|which|your|thoughts|opinion|view).+(death|dying|mortality|suicide|depression|anxiety|existential|nihilism|apocalypse|climate change|extinction|afterlife|hell|suffering|tragedy|funeral|grave|cemetery|doom|end of world)",
+    
+    "tv_series_responses": {
+      "pattern": "(what|who|how|when|why|which|your|thoughts|opinion|view|best|better|favorite|worst|hate|love|like|dislike|think).+(tv|television|show|series|episode|season|finale|character|actor|actress|netflix|hulu|hbo|streaming|binge|watch)",
+      "subpatterns": {
+        "preferences": "best|favorite|worst|top|greatest|recommend|watch|binge|opinion|like|love|hate|overrated|underrated",
+        "characters": "character|protagonist|antagonist|villain|hero|actress|actor|cast|role|played|portrayal",
+        "finales": "finale|ending|ended|conclusion|final episode|series finale|season finale|last episode",
+        "spoilers": "spoiler|spoilers|don't tell|reveal|ruin|plot twist|surprise|what happens|dies|death"
+      }
+    },
+    
+    "sports_responses": {
+      "pattern": "(what|who|how|when|why|which).+(team|player|sport|game|match|score|championship|tournament|athlete|coach|league|win|lose|play|football|soccer|basketball|baseball|tennis|golf|hockey|rugby|cricket)(?!.*movie)(?!.*fiction)",
+      "subpatterns": {
+        "football":   "football|soccer|nfl|touchdown|super bowl",
+        "basketball": "basketball|nba|dunk|hoop|court",
+        "baseball":   "baseball|mlb|bat|pitch|home run",
+        "athletes":   "athlete|player|star|champion|mvp",
+        "practice":   "practice|training|workout|exercise|drill"
+      }
+    },
+  
     "political_discussions": "(what|who|how|when|why|which|your|thoughts|opinion|view|stance).+(politic|government|election|president|vote|democracy|republican|democrat|congress|parliament|law|policy|politician|candidate|party|debate|campaign)",
-    "nerd_culture_responses": "(what|who|how|when|why|which|your|thoughts|opinion|view|best|better|stronger|win|defeat|versus|vs).+(superhero|villain|comic|marvel|dc|batman|superman|iron man|avenger|jedi|sith|star wars|star trek|game|gaming|console|playstation|xbox|nintendo|anime|manga|cosplay|dungeons|dragons|rpg|mmorpg|character|movie adaptation|canon|fandom|geek|nerd)"
+  
+    "nerd_culture_responses": {
+      "pattern": "(what|who|how|when|why|which|your|thoughts|opinion|view|best|better|stronger|win|defeat|versus|vs).+(superhero|villain|comic|marvel|dc|batman|superman|iron man|avenger|jedi|sith|star wars|star trek|game|gaming|console|playstation|xbox|nintendo|anime|manga|cosplay|dungeons|dragons|rpg|mmorpg|character|movie adaptation|canon|fandom|geek|nerd)",
+      "subpatterns": {
+        "sci-fi":   "star wars|star trek|sci-fi|science fiction|space|galaxy|laser|movie",
+        "comics":   "comic|superhero|marvel|dc|batman|superman|iron man|hero|villain",
+        "gaming":   "game|gaming|playstation|xbox|nintendo|steam|video game",
+        "anime":    "anime|manga|cosplay|otaku|japan|animation"
+      }
+    }
 }

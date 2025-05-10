@@ -1,7 +1,7 @@
 [tool.pytest.ini_options]
 addopts = "-v --color=yes -ra --strict-markers --cov=sassy_ai --cov-report=term-missing --debug=config"
 python_files = ["tests/test_*.py"]
-pythonpath = ["sassy_ai"]
+pythonpath = ["sassy_ai", "sassy_core"]
 testpaths = [
     "sassy_ai/tests"
 ]

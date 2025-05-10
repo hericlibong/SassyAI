@@ -5,7 +5,7 @@ import click
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
-from engine import InsultEngine
+from sassy_core.engine import InsultEngine
 
 engine = InsultEngine()
 console = Console()
@@ -20,6 +20,8 @@ THEME_DETAILS = {
     "sports":          {"prompt": "Who is the best football player?",             "color": "blue",       "emoji": "⚽"},
     "political_world": {"prompt": "What do you think about the current politics?", "color": "bright_red", "emoji": "🏛️"},
     "nerd_culture":    {"prompt": "Who would win: Batman or Iron Man?",           "color": "bright_magenta", "emoji": "🤓"},
+    "dark_humor":      {"prompt": "What happens after we die?",                   "color": "bright_black", "emoji": "💀"},
+    "tv_series":       {"prompt": "What's the best TV show of all time?",         "color": "bright_cyan", "emoji": "📺"},
 }
 
 current_theme = "general"

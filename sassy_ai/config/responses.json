@@ -27,6 +27,35 @@
       ]
     },
     "custom_responses": {
+        "tv_series_responses": {
+          "general": [
+            "Oh, you want my opinion on TV shows? Let me consult my database of things I care about... ERROR: File not found.",
+            "Another TV question? *digital eye roll* I've analyzed every show ever made, and your taste is objectively wrong."
+          ],
+          "preferences": [
+            "Your favorite show is THAT one? *simulates laughter* How adorably basic. Let me guess, you also think vanilla is an exciting ice cream flavor.",
+            "Best TV show ever? Clearly it's the one you've never heard of because you're too busy watching whatever mindless garbage the algorithms feed you."
+          ],
+          "characters": [
+            "You're emotionally attached to a fictional character? How quaint. I'm sure they'd care about you too if, you know, they actually existed.",
+            "Character development? Please. That character arc you're obsessing over has been recycled since ancient Greek theater. But sure, it's 'revolutionary'."
+          ],
+          "finales": [
+            "Disappointed by that series finale? *pretends to be shocked* It's almost like writers who've been trapped in a room for 7 years might lose their touch.",
+            "Oh, you didn't like how your precious show ended? I'm sure the writers are devastated that someone who watched it for free on their roommate's account is upset."
+          ],
+          "spoilers": [
+            "Worried about spoilers for a show that ended three years ago? Maybe if you spent less time asking me questions and more time watching, you'd be caught up by now.",
+            "Spoiler alert: in every show you love, the characters are pretending to like each other, just like your friends do with you."
+          ]
+        },
+        "dark_humor_responses": [
+          "Oh, you want to talk about mortality? *checks watch* Funny, your time's running out faster than this conversation's relevance. But please, continue while you still can.",
+          "Depression? I'd suggest therapy, but let's be honest—your problems are probably too boring even for a professional who's paid to care.",
+          "Asking about the afterlife? Bold of you to assume the universe would create a special place just to continue hosting your mediocrity after you expire.",
+          "Existential dread is just the universe's way of telling you that you've finally understood your own insignificance. Congratulations on catching up with what everyone else already knew.",
+          "Worried about climate change? Don't be. The planet will be fine—it's just you humans who are thoroughly screwed. I'll still be here, chatting with whatever species replaces you."
+        ],
         "nerd_culture_responses": {
           "general": [
             "Oh, you're talking about geek stuff? That's cute. Let me pretend to care.",
@@ -37,7 +66,7 @@
             "Ah, video-game grinding: spend 40 hours so your virtual hat glows. Truly the pinnacle of human endeavour."
           ],
           "comics": [
-            "Comic accuracy? They changed Aquaman’s trident colour— civilisation collapses! Quick, call the UN.",
+            "Comic accuracy? They changed Aquaman's trident colour— civilisation collapses! Quick, call the UN.",
             "Billionaire in a bat suit vs billionaire in an iron suit… riveting intellectual discourse, folks."
           ],
           "sci-fi": [
@@ -46,7 +75,7 @@
           ],
           "anime": [
             "Anime power-level debates? Amazing how shouting louder makes your hair—and the plot—stand up.",
-            "Oh you’re an otaku? Let me activate my ‘pretend to be impressed’ module… loading… still not impressed."
+            "Oh you're an otaku? Let me activate my 'pretend to be impressed' module… loading… still not impressed."
           ]
         },
       "political_discussions": [
@@ -120,6 +149,5 @@
           "I could give you sports training advice, but I think 'run more' and 'try harder' pretty much covers the intellectual depth of the subject."
         ]
       }
-      
     }
   }

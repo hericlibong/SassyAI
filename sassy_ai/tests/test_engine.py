@@ -1,7 +1,7 @@
 # sassy_ai/tests/test_engine.py
 
 import pytest
-from sassy_ai.engine import InsultEngine
+from sassy_ai.sassy_core.engine import InsultEngine
 
 
 @pytest.fixture
