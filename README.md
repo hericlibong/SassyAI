@@ -1,5 +1,9 @@
 # SassyAI - The Sarcastic AI Assistant
 
+<p align="center">
+   <img src="media/sassy_ai_picture.png" alt="SassyAI logo" />
+</p>
+
 ## Introduction
 
 SassyAI is a sarcastic assistant designed to answer questions with witty, snarky, and ironic remarks. This project was developed as part of the **Amazon Q Developer - Quack the Code** challenge. The goal is to demonstrate the ability to integrate Amazon Q to generate automated and sarcastic responses while providing an interactive experience via a command-line interface (CLI).
