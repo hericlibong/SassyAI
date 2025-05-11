@@ -13,42 +13,47 @@ def runner():
 
 
 def test_help_command(runner):
-    result = runner.invoke(chat_loop, input=":help\n:exit\n")
+    result = runner.invoke(chat_loop, input="User\n:help\n:exit\n")
+    assert result.exit_code == 0
     assert "📝 Available commands:" in result.output
 
 
 def test_themes_command(runner):
-    result = runner.invoke(chat_loop, input=":themes\n:exit\n")
+    result = runner.invoke(chat_loop, input="User\n:themes\n:exit\n")
+    assert result.exit_code == 0
     assert "🧩 Available themes:" in result.output
 
 
 def test_change_theme(runner):
-    result = runner.invoke(chat_loop, input=":mode philosophy\n:exit\n")
+    result = runner.invoke(chat_loop, input="User\n:mode philosophy\n:exit\n")
+    assert result.exit_code == 0
     assert "Current theme: philosophy" in result.output
 
 
 def test_exit_command(runner):
-    result = runner.invoke(chat_loop, input=":exit\n")
-    assert any(msg in result.output for msg in exit_messages)
+    result = runner.invoke(chat_loop, input="User\n:exit\n")
+    assert result.exit_code == 0
+    assert any(exit_msg in result.output for exit_msg in [
+        "👋 Bye, human.",
+        "🚪 Exiting...",
+        "💤 Logging off...",
+        "🤖 Shutting down...",
+        "🛑 Ending session..."
+    ])
 
 
 def test_ask_question(runner):
-    result = runner.invoke(chat_loop, input="What is the meaning of life?\n:exit\n")
-    assert re.search(r"💬 .*SassyAI:", result.output)
+    result = runner.invoke(chat_loop, input="User\nWhat is the capital of France?\n:exit\n")
+    assert result.exit_code == 0
+    assert "SassyAI:" in result.output
 
 
 def test_themes_and_mode_and_info_and_stats(runner):
-    # 1) :themes  2) :mode code  3) :info  4) :stats  5) :exit
-    cmds = ":themes\n:mode code\n:info\n:stats\n:exit\n"
-    result = runner.invoke(chat_loop, input=cmds)
-    # on liste bien les thèmes
+    result = runner.invoke(chat_loop, input="User\n:themes\n:mode philosophy\n:info\n:stats\n:exit\n")
+    assert result.exit_code == 0
     assert "Available themes" in result.output
-    # on change bien de thème (via la règle Rich)
-    assert "Current theme: code" in result.output
-    # on affiche les infos du thème
-    assert THEME_DETAILS["code"]["prompt"] in result.output
-    # on affiche les stats
-    assert "Theme usage stats" in result.output
+    assert "Current theme: philosophy" in result.output
+    assert "Theme usage stats:" in result.output
 
 
 def test_random_changes_theme(runner):

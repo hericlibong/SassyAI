@@ -4,464 +4,464 @@ cwd=/home/hericdev/CHALLENGES
 args=()
 
   pytest_cmdline_main [hook]
-      config: <_pytest.config.Config object at 0x766291221e50>
+      config: <_pytest.config.Config object at 0x71d8db9493d0>
     pytest_plugin_registered [hook]
         plugin: <Session  exitstatus='<UNSET>' testsfailed=0 testscollected=0>
         plugin_name: session
-        manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+        manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
     finish pytest_plugin_registered --> [] [hook]
     pytest_configure [hook]
-        config: <_pytest.config.Config object at 0x766291221e50>
+        config: <_pytest.config.Config object at 0x71d8db9493d0>
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.LFPlugin object at 0x766290e378f0>
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x71d8db65f8f0>
           plugin_name: lfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.NFPlugin object at 0x766290e792e0>
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x71d8dace7170>
           plugin_name: nfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
     find_module called for: faulthandler [assertion]
       pytest_plugin_registered [hook]
           plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
           plugin_name: legacypath-tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
     find_module called for: pdb [assertion]
     find_module called for: cmd [assertion]
     find_module called for: code [assertion]
     find_module called for: codeop [assertion]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
-          plugin_name: 130165710736512
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          plugin: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
+          plugin_name: 125176218633856
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.config.Config object at 0x766291221e50>
+          plugin: <_pytest.config.Config object at 0x71d8db9493d0>
           plugin_name: pytestconfig
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.mark' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/mark/__init__.py'>
           plugin_name: mark
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.main' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/main.py'>
           plugin_name: main
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.runner' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/runner.py'>
           plugin_name: runner
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.fixtures' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/fixtures.py'>
           plugin_name: fixtures
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.helpconfig' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/helpconfig.py'>
           plugin_name: helpconfig
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.python' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/python.py'>
           plugin_name: python
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.terminal' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/terminal.py'>
           plugin_name: terminal
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.debugging' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/debugging.py'>
           plugin_name: debugging
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.unittest' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/unittest.py'>
           plugin_name: unittest
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.capture' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/capture.py'>
           plugin_name: capture
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.skipping' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/skipping.py'>
           plugin_name: skipping
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.legacypath' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/legacypath.py'>
           plugin_name: legacypath
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.tmpdir' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/tmpdir.py'>
           plugin_name: tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.monkeypatch' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/monkeypatch.py'>
           plugin_name: monkeypatch
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.recwarn' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/recwarn.py'>
           plugin_name: recwarn
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.pastebin' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/pastebin.py'>
           plugin_name: pastebin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.assertion' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/assertion/__init__.py'>
           plugin_name: assertion
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.junitxml' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/junitxml.py'>
           plugin_name: junitxml
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.doctest' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/doctest.py'>
           plugin_name: doctest
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.cacheprovider' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/cacheprovider.py'>
           plugin_name: cacheprovider
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.freeze_support' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/freeze_support.py'>
           plugin_name: freeze_support
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.setuponly' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/setuponly.py'>
           plugin_name: setuponly
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.setupplan' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/setupplan.py'>
           plugin_name: setupplan
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.stepwise' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/stepwise.py'>
           plugin_name: stepwise
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.warnings' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/warnings.py'>
           plugin_name: warnings
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.logging' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/logging.py'>
           plugin_name: logging
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.reports' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/reports.py'>
           plugin_name: reports
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.python_path' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/python_path.py'>
           plugin_name: python_path
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.unraisableexception' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/unraisableexception.py'>
           plugin_name: unraisableexception
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.threadexception' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/threadexception.py'>
           plugin_name: threadexception
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.faulthandler' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/faulthandler.py'>
           plugin_name: faulthandler
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module 'pytest_cov.plugin' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/pytest_cov/plugin.py'>
           plugin_name: pytest_cov
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=6 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=7 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=8 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=3 _state='started' tmpfile=<_io.TextIOWrapper name='/dev/null' mode='r' encoding='utf-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
           plugin_name: capturemanager
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <pytest_cov.plugin.CovPlugin object at 0x7662904df680>
+          plugin: <pytest_cov.plugin.CovPlugin object at 0x71d8dace6210>
           plugin_name: _cov
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
           plugin_name: session
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.LFPlugin object at 0x766290e378f0>
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x71d8db65f8f0>
           plugin_name: lfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.NFPlugin object at 0x766290e792e0>
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x71d8dace7170>
           plugin_name: nfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
           plugin_name: legacypath-tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.terminal.TerminalReporter object at 0x766290e496d0>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x71d8dabb56d0>
           plugin_name: terminalreporter
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.logging.LoggingPlugin object at 0x766290e54350>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x71d8db6646e0>
           plugin_name: logging-plugin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
     finish pytest_configure --> [] [hook]
     pytest_sessionstart [hook]
         session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
       pytest_plugin_registered [hook]
-          plugin: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
-          plugin_name: 130165710736512
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          plugin: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
+          plugin_name: 125176218633856
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.config.Config object at 0x766291221e50>
+          plugin: <_pytest.config.Config object at 0x71d8db9493d0>
           plugin_name: pytestconfig
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.mark' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/mark/__init__.py'>
           plugin_name: mark
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.main' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/main.py'>
           plugin_name: main
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.runner' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/runner.py'>
           plugin_name: runner
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.fixtures' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/fixtures.py'>
           plugin_name: fixtures
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.helpconfig' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/helpconfig.py'>
           plugin_name: helpconfig
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.python' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/python.py'>
           plugin_name: python
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.terminal' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/terminal.py'>
           plugin_name: terminal
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.debugging' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/debugging.py'>
           plugin_name: debugging
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.unittest' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/unittest.py'>
           plugin_name: unittest
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.capture' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/capture.py'>
           plugin_name: capture
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.skipping' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/skipping.py'>
           plugin_name: skipping
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.legacypath' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/legacypath.py'>
           plugin_name: legacypath
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.tmpdir' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/tmpdir.py'>
           plugin_name: tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.monkeypatch' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/monkeypatch.py'>
           plugin_name: monkeypatch
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.recwarn' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/recwarn.py'>
           plugin_name: recwarn
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.pastebin' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/pastebin.py'>
           plugin_name: pastebin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.assertion' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/assertion/__init__.py'>
           plugin_name: assertion
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.junitxml' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/junitxml.py'>
           plugin_name: junitxml
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.doctest' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/doctest.py'>
           plugin_name: doctest
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.cacheprovider' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/cacheprovider.py'>
           plugin_name: cacheprovider
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.freeze_support' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/freeze_support.py'>
           plugin_name: freeze_support
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.setuponly' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/setuponly.py'>
           plugin_name: setuponly
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.setupplan' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/setupplan.py'>
           plugin_name: setupplan
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.stepwise' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/stepwise.py'>
           plugin_name: stepwise
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.warnings' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/warnings.py'>
           plugin_name: warnings
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.logging' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/logging.py'>
           plugin_name: logging
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.reports' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/reports.py'>
           plugin_name: reports
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.python_path' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/python_path.py'>
           plugin_name: python_path
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.unraisableexception' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/unraisableexception.py'>
           plugin_name: unraisableexception
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.threadexception' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/threadexception.py'>
           plugin_name: threadexception
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module '_pytest.faulthandler' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/_pytest/faulthandler.py'>
           plugin_name: faulthandler
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <module 'pytest_cov.plugin' from '/home/hericdev/CHALLENGES/venv/lib/python3.12/site-packages/pytest_cov/plugin.py'>
           plugin_name: pytest_cov
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=6 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> err=<FDCapture 2 oldfd=7 _state='suspended' tmpfile=<_io.TextIOWrapper name="<_io.FileIO name=8 mode='rb+' closefd=True>" mode='r+' encoding='utf-8'>> in_=<FDCapture 0 oldfd=3 _state='started' tmpfile=<_io.TextIOWrapper name='/dev/null' mode='r' encoding='utf-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
           plugin_name: capturemanager
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <pytest_cov.plugin.CovPlugin object at 0x7662904df680>
+          plugin: <pytest_cov.plugin.CovPlugin object at 0x71d8dace6210>
           plugin_name: _cov
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
           plugin_name: session
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.LFPlugin object at 0x766290e378f0>
+          plugin: <_pytest.cacheprovider.LFPlugin object at 0x71d8db65f8f0>
           plugin_name: lfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.cacheprovider.NFPlugin object at 0x766290e792e0>
+          plugin: <_pytest.cacheprovider.NFPlugin object at 0x71d8dace7170>
           plugin_name: nfplugin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
           plugin: <class '_pytest.legacypath.LegacyTmpdirPlugin'>
           plugin_name: legacypath-tmpdir
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.terminal.TerminalReporter object at 0x766290e496d0>
+          plugin: <_pytest.terminal.TerminalReporter object at 0x71d8dabb56d0>
           plugin_name: terminalreporter
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.logging.LoggingPlugin object at 0x766290e54350>
+          plugin: <_pytest.logging.LoggingPlugin object at 0x71d8db6646e0>
           plugin_name: logging-plugin
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_plugin_registered [hook]
-          plugin: <_pytest.fixtures.FixtureManager object at 0x7662903fb980>
+          plugin: <_pytest.fixtures.FixtureManager object at 0x71d8dace6120>
           plugin_name: funcmanage
-          manager: <_pytest.config.PytestPluginManager object at 0x766290f34c80>
+          manager: <_pytest.config.PytestPluginManager object at 0x71d8dc0bc680>
       finish pytest_plugin_registered --> [] [hook]
       pytest_report_header [hook]
-          config: <_pytest.config.Config object at 0x766291221e50>
+          config: <_pytest.config.Config object at 0x71d8db9493d0>
           start_path: /home/hericdev/CHALLENGES
           startdir: /home/hericdev/CHALLENGES
       find_module called for: email.parser [assertion]
@@ -487,12 +487,12 @@ args=()
             pytest_make_collect_report [hook]
                 collector: <Dir CHALLENGES>
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/.git
                   path: /home/hericdev/CHALLENGES/.git
               finish pytest_ignore_collect --> True [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/.gitignore
                   path: /home/hericdev/CHALLENGES/.gitignore
               finish pytest_ignore_collect --> None [hook]
@@ -502,12 +502,12 @@ args=()
                   path: /home/hericdev/CHALLENGES/.gitignore
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/.pytest_cache
                   path: /home/hericdev/CHALLENGES/.pytest_cache
               finish pytest_ignore_collect --> True [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/README.md
                   path: /home/hericdev/CHALLENGES/README.md
               finish pytest_ignore_collect --> None [hook]
@@ -517,7 +517,7 @@ args=()
                   path: /home/hericdev/CHALLENGES/README.md
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/config
                   path: /home/hericdev/CHALLENGES/config
               finish pytest_ignore_collect --> None [hook]
@@ -527,7 +527,16 @@ args=()
                   path: /home/hericdev/CHALLENGES/config
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
+                  collection_path: /home/hericdev/CHALLENGES/media
+                  path: /home/hericdev/CHALLENGES/media
+              finish pytest_ignore_collect --> None [hook]
+              pytest_collect_directory [hook]
+                  path: /home/hericdev/CHALLENGES/media
+                  parent: <Dir CHALLENGES>
+              finish pytest_collect_directory --> <Dir media> [hook]
+              pytest_ignore_collect [hook]
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/pyproject.toml
                   path: /home/hericdev/CHALLENGES/pyproject.toml
               finish pytest_ignore_collect --> None [hook]
@@ -537,7 +546,7 @@ args=()
                   path: /home/hericdev/CHALLENGES/pyproject.toml
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/requirements.txt
                   path: /home/hericdev/CHALLENGES/requirements.txt
               finish pytest_ignore_collect --> None [hook]
@@ -551,7 +560,7 @@ args=()
                   parent: <Dir CHALLENGES>
               finish pytest_collect_directory --> <Package sassy_ai> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/setup.cfg
                   path: /home/hericdev/CHALLENGES/setup.cfg
               finish pytest_ignore_collect --> None [hook]
@@ -561,18 +570,18 @@ args=()
                   path: /home/hericdev/CHALLENGES/setup.cfg
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/venv
                   path: /home/hericdev/CHALLENGES/venv
               finish pytest_ignore_collect --> True [hook]
-            finish pytest_make_collect_report --> <CollectReport '.' lenresult=1 outcome='passed'> [hook]
+            finish pytest_make_collect_report --> <CollectReport '.' lenresult=2 outcome='passed'> [hook]
             pytest_collectstart [hook]
                 collector: <Package sassy_ai>
             finish pytest_collectstart --> [] [hook]
             pytest_make_collect_report [hook]
                 collector: <Package sassy_ai>
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/sassy_ai/__init__.py
                   path: /home/hericdev/CHALLENGES/sassy_ai/__init__.py
               finish pytest_ignore_collect --> None [hook]
@@ -582,7 +591,7 @@ args=()
                   path: /home/hericdev/CHALLENGES/sassy_ai/__init__.py
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/sassy_ai/.coverage
                   path: /home/hericdev/CHALLENGES/sassy_ai/.coverage
               finish pytest_ignore_collect --> None [hook]
@@ -592,12 +601,12 @@ args=()
                   path: /home/hericdev/CHALLENGES/sassy_ai/.coverage
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/sassy_ai/__pycache__
                   path: /home/hericdev/CHALLENGES/sassy_ai/__pycache__
               finish pytest_ignore_collect --> True [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/sassy_ai/config
                   path: /home/hericdev/CHALLENGES/sassy_ai/config
               finish pytest_ignore_collect --> None [hook]
@@ -606,7 +615,7 @@ args=()
                   parent: <Package sassy_ai>
               finish pytest_collect_directory --> <Dir config> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/sassy_ai/dark_humor_responses.txt
                   path: /home/hericdev/CHALLENGES/sassy_ai/dark_humor_responses.txt
               finish pytest_ignore_collect --> None [hook]
@@ -616,7 +625,7 @@ args=()
                   path: /home/hericdev/CHALLENGES/sassy_ai/dark_humor_responses.txt
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/sassy_ai/logs
                   path: /home/hericdev/CHALLENGES/sassy_ai/logs
               finish pytest_ignore_collect --> None [hook]
@@ -625,7 +634,7 @@ args=()
                   parent: <Package sassy_ai>
               finish pytest_collect_directory --> <Dir logs> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/sassy_ai/main_cli.py
                   path: /home/hericdev/CHALLENGES/sassy_ai/main_cli.py
               finish pytest_ignore_collect --> None [hook]
@@ -635,7 +644,7 @@ args=()
                   path: /home/hericdev/CHALLENGES/sassy_ai/main_cli.py
               finish pytest_collect_file --> [] [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/sassy_ai/sassy_core
                   path: /home/hericdev/CHALLENGES/sassy_ai/sassy_core
               finish pytest_ignore_collect --> None [hook]
@@ -648,7 +657,7 @@ args=()
                   parent: <Package sassy_ai>
               finish pytest_collect_directory --> <Package tests> [hook]
               pytest_ignore_collect [hook]
-                  config: <_pytest.config.Config object at 0x766291221e50>
+                  config: <_pytest.config.Config object at 0x71d8db9493d0>
                   collection_path: /home/hericdev/CHALLENGES/sassy_ai/tv_series_responses.txt
                   path: /home/hericdev/CHALLENGES/sassy_ai/tv_series_responses.txt
               finish pytest_ignore_collect --> None [hook]
@@ -669,7 +678,7 @@ args=()
       pytest_make_collect_report [hook]
           collector: <Package tests>
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x766291221e50>
+            config: <_pytest.config.Config object at 0x71d8db9493d0>
             collection_path: /home/hericdev/CHALLENGES/sassy_ai/tests/__init__.py
             path: /home/hericdev/CHALLENGES/sassy_ai/tests/__init__.py
         finish pytest_ignore_collect --> None [hook]
@@ -679,12 +688,12 @@ args=()
             path: /home/hericdev/CHALLENGES/sassy_ai/tests/__init__.py
         finish pytest_collect_file --> [] [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x766291221e50>
+            config: <_pytest.config.Config object at 0x71d8db9493d0>
             collection_path: /home/hericdev/CHALLENGES/sassy_ai/tests/__pycache__
             path: /home/hericdev/CHALLENGES/sassy_ai/tests/__pycache__
         finish pytest_ignore_collect --> True [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x766291221e50>
+            config: <_pytest.config.Config object at 0x71d8db9493d0>
             collection_path: /home/hericdev/CHALLENGES/sassy_ai/tests/test_cli_commands.py
             path: /home/hericdev/CHALLENGES/sassy_ai/tests/test_cli_commands.py
         finish pytest_ignore_collect --> None [hook]
@@ -699,7 +708,7 @@ args=()
           finish pytest_pycollect_makemodule --> <Module test_cli_commands.py> [hook]
         finish pytest_collect_file --> [<Module test_cli_commands.py>] [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x766291221e50>
+            config: <_pytest.config.Config object at 0x71d8db9493d0>
             collection_path: /home/hericdev/CHALLENGES/sassy_ai/tests/test_engine.py
             path: /home/hericdev/CHALLENGES/sassy_ai/tests/test_engine.py
         finish pytest_ignore_collect --> None [hook]
@@ -714,7 +723,7 @@ args=()
           finish pytest_pycollect_makemodule --> <Module test_engine.py> [hook]
         finish pytest_collect_file --> [<Module test_engine.py>] [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x766291221e50>
+            config: <_pytest.config.Config object at 0x71d8db9493d0>
             collection_path: /home/hericdev/CHALLENGES/sassy_ai/tests/test_main_cli.py
             path: /home/hericdev/CHALLENGES/sassy_ai/tests/test_main_cli.py
         finish pytest_ignore_collect --> None [hook]
@@ -729,7 +738,7 @@ args=()
           finish pytest_pycollect_makemodule --> <Module test_main_cli.py> [hook]
         finish pytest_collect_file --> [<Module test_main_cli.py>] [hook]
         pytest_ignore_collect [hook]
-            config: <_pytest.config.Config object at 0x766291221e50>
+            config: <_pytest.config.Config object at 0x71d8db9493d0>
             collection_path: /home/hericdev/CHALLENGES/sassy_ai/tests/test_subcategories.py
             path: /home/hericdev/CHALLENGES/sassy_ai/tests/test_subcategories.py
         finish pytest_ignore_collect --> None [hook]
@@ -754,8 +763,7 @@ args=()
       find_module called for: sassy_ai.tests [assertion]
       find_module called for: sassy_ai.tests.test_cli_commands [assertion]
       matched test file '/home/hericdev/CHALLENGES/sassy_ai/tests/test_cli_commands.py' [assertion]
-      _read_pyc(/home/hericdev/CHALLENGES/sassy_ai/tests/test_cli_commands.py): out of date [assertion]
-      rewriting PosixPath('/home/hericdev/CHALLENGES/sassy_ai/tests/test_cli_commands.py') [assertion]
+      found cached rewritten pyc for /home/hericdev/CHALLENGES/sassy_ai/tests/test_cli_commands.py [assertion]
       find_module called for: click [assertion]
       find_module called for: click.core [assertion]
       find_module called for: click.types [assertion]
@@ -876,54 +884,54 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_cli_commands.py>
             name: runner
-            obj: <function runner at 0x76629032c400>
+            obj: <function runner at 0x71d8dab14d60>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_cli_commands.py>
             name: test_help_command
-            obj: <function test_help_command at 0x7662900a0900>
+            obj: <function test_help_command at 0x71d8da8a09a0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x7662904de660>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8da833350>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_help_command>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_cli_commands.py>
             name: test_themes_command
-            obj: <function test_themes_command at 0x7662900a09a0>
+            obj: <function test_themes_command at 0x71d8da8a0a40>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x76629050d910>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8dace5e50>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_themes_command>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_cli_commands.py>
             name: test_change_theme_valid
-            obj: <function test_change_theme_valid at 0x7662900a0a40>
+            obj: <function test_change_theme_valid at 0x71d8da8a0ae0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290448530>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8da833350>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_change_theme_valid>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_cli_commands.py>
             name: test_change_theme_invalid
-            obj: <function test_change_theme_invalid at 0x7662900a0ae0>
+            obj: <function test_change_theme_invalid at 0x71d8da8a0b80>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290448500>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8dace5e50>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_change_theme_invalid>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_cli_commands.py>
             name: test_exit_command
-            obj: <function test_exit_command at 0x7662900a0b80>
+            obj: <function test_exit_command at 0x71d8da8a0c20>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290381340>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8db62aea0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_exit_command>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_cli_commands.py>
             name: test_invalid_command
-            obj: <function test_invalid_command at 0x7662900a0c20>
+            obj: <function test_invalid_command at 0x71d8da8a0cc0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x76629050d910>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8da8624b0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_invalid_command>] [hook]
       finish pytest_make_collect_report --> <CollectReport 'sassy_ai/tests/test_cli_commands.py' lenresult=6 outcome='passed'> [hook]
@@ -962,8 +970,7 @@ args=()
           collector: <Module test_engine.py>
       find_module called for: sassy_ai.tests.test_engine [assertion]
       matched test file '/home/hericdev/CHALLENGES/sassy_ai/tests/test_engine.py' [assertion]
-      _read_pyc(/home/hericdev/CHALLENGES/sassy_ai/tests/test_engine.py): out of date [assertion]
-      rewriting PosixPath('/home/hericdev/CHALLENGES/sassy_ai/tests/test_engine.py') [assertion]
+      found cached rewritten pyc for /home/hericdev/CHALLENGES/sassy_ai/tests/test_engine.py [assertion]
       find_module called for: sassy_ai.sassy_core [assertion]
       find_module called for: sassy_ai.sassy_core.engine [assertion]
         pytest_pycollect_makeitem [hook]
@@ -989,46 +996,46 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_engine.py>
             name: engine
-            obj: <function engine at 0x7662900a1da0>
+            obj: <function engine at 0x71d8da8a1c60>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_engine.py>
             name: test_fix_typos
-            obj: <function test_fix_typos at 0x7662900a2020>
+            obj: <function test_fix_typos at 0x71d8da8a1f80>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076de0>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8da882990>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_fix_typos>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_engine.py>
             name: test_detect_intent_general
-            obj: <function test_detect_intent_general at 0x7662900a1ee0>
+            obj: <function test_detect_intent_general at 0x71d8da8a1e40>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076c60>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8da8829c0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_detect_intent_general>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_engine.py>
             name: test_get_reply_known
-            obj: <function test_get_reply_known at 0x7662900a1f80>
+            obj: <function test_get_reply_known at 0x71d8da8a1ee0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076d50>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8da8829f0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_get_reply_known>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_engine.py>
             name: test_get_reply_unknown
-            obj: <function test_get_reply_unknown at 0x7662900a2480>
+            obj: <function test_get_reply_unknown at 0x71d8da8a23e0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076ed0>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8da882ba0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_get_reply_unknown>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_engine.py>
             name: test_fallbacks
-            obj: <function test_fallbacks at 0x7662900a2520>
+            obj: <function test_fallbacks at 0x71d8da8a2480>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076ff0>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8da882cc0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_fallbacks>] [hook]
       finish pytest_make_collect_report --> <CollectReport 'sassy_ai/tests/test_engine.py' lenresult=5 outcome='passed'> [hook]
@@ -1108,62 +1115,62 @@ args=()
         pytest_pycollect_makeitem [hook]
             collector: <Module test_main_cli.py>
             name: runner
-            obj: <function runner at 0x7662900a18a0>
+            obj: <function runner at 0x71d8da8a2e80>
         finish pytest_pycollect_makeitem --> None [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_main_cli.py>
             name: test_help_command
-            obj: <function test_help_command at 0x7662900a1620>
+            obj: <function test_help_command at 0x71d8da8a2f20>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290077740>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8dace6cc0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_help_command>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_main_cli.py>
             name: test_themes_command
-            obj: <function test_themes_command at 0x7662900a1bc0>
+            obj: <function test_themes_command at 0x71d8da8a2fc0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076420>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8dace7080>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_themes_command>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_main_cli.py>
             name: test_change_theme
-            obj: <function test_change_theme at 0x7662900a2700>
+            obj: <function test_change_theme at 0x71d8da8a3060>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290077680>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8dace6cc0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_change_theme>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_main_cli.py>
             name: test_exit_command
-            obj: <function test_exit_command at 0x7662900a25c0>
+            obj: <function test_exit_command at 0x71d8da8a3100>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076540>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8dace7080>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_exit_command>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_main_cli.py>
             name: test_ask_question
-            obj: <function test_ask_question at 0x7662900a2840>
+            obj: <function test_ask_question at 0x71d8da8a31a0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076de0>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8dace6cc0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_ask_question>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_main_cli.py>
             name: test_themes_and_mode_and_info_and_stats
-            obj: <function test_themes_and_mode_and_info_and_stats at 0x7662900a2660>
+            obj: <function test_themes_and_mode_and_info_and_stats at 0x71d8da8a3240>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076f00>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8dace7080>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_themes_and_mode_and_info_and_stats>] [hook]
         pytest_pycollect_makeitem [hook]
             collector: <Module test_main_cli.py>
             name: test_random_changes_theme
-            obj: <function test_random_changes_theme at 0x7662900a2980>
+            obj: <function test_random_changes_theme at 0x71d8da8a32e0>
           pytest_generate_tests [hook]
-              metafunc: <_pytest.python.Metafunc object at 0x766290076720>
+              metafunc: <_pytest.python.Metafunc object at 0x71d8dace6cc0>
           finish pytest_generate_tests --> [] [hook]
         finish pytest_pycollect_makeitem --> [<Function test_random_changes_theme>] [hook]
       finish pytest_make_collect_report --> <CollectReport 'sassy_ai/tests/test_main_cli.py' lenresult=7 outcome='passed'> [hook]
@@ -1216,13 +1223,13 @@ args=()
       finish pytest_collectreport --> [] [hook]
       pytest_collection_modifyitems [hook]
           session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
-          config: <_pytest.config.Config object at 0x766291221e50>
+          config: <_pytest.config.Config object at 0x71d8db9493d0>
           items: [<Function test_help_command>, <Function test_themes_command>, <Function test_change_theme_valid>, <Function test_change_theme_invalid>, <Function test_exit_command>, <Function test_invalid_command>, <Function test_fix_typos>, <Function test_detect_intent_general>, <Function test_get_reply_known>, <Function test_get_reply_unknown>, <Function test_fallbacks>, <Function test_help_command>, <Function test_themes_command>, <Function test_change_theme>, <Function test_exit_command>, <Function test_ask_question>, <Function test_themes_and_mode_and_info_and_stats>, <Function test_random_changes_theme>]
       finish pytest_collection_modifyitems --> [] [hook]
       pytest_collection_finish [hook]
           session: <Session  exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=0>
         pytest_report_collectionfinish [hook]
-            config: <_pytest.config.Config object at 0x766291221e50>
+            config: <_pytest.config.Config object at 0x71d8db9493d0>
             items: [<Function test_help_command>, <Function test_themes_command>, <Function test_change_theme_valid>, <Function test_change_theme_invalid>, <Function test_exit_command>, <Function test_invalid_command>, <Function test_fix_typos>, <Function test_detect_intent_general>, <Function test_get_reply_known>, <Function test_get_reply_unknown>, <Function test_fallbacks>, <Function test_help_command>, <Function test_themes_command>, <Function test_change_theme>, <Function test_exit_command>, <Function test_ask_question>, <Function test_themes_and_mode_and_info_and_stats>, <Function test_random_changes_theme>]
             start_path: /home/hericdev/CHALLENGES
             startdir: /home/hericdev/CHALLENGES
@@ -1243,7 +1250,7 @@ args=()
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_cli_commands.py'>
               request: <SubRequest 'runner' for <Function test_help_command>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628fee0170> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da9ad160> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_help_command>
@@ -1253,7 +1260,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_help_command' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_help_command' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1271,7 +1278,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_help_command' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_help_command' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1290,7 +1297,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_help_command' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_help_command' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -1303,14 +1310,14 @@ args=()
           nextitem: <Function test_change_theme_valid>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_themes_command
-            location: ('sassy_ai/tests/test_cli_commands.py', 25, 'test_themes_command')
+            location: ('sassy_ai/tests/test_cli_commands.py', 20, 'test_themes_command')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_themes_command>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_cli_commands.py'>
               request: <SubRequest 'runner' for <Function test_themes_command>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628fee1f40> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da6cb2c0> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_themes_command>
@@ -1320,7 +1327,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_themes_command' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_themes_command' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1337,7 +1344,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_themes_command' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_themes_command' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1356,12 +1363,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_themes_command' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_themes_command' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_themes_command
-            location: ('sassy_ai/tests/test_cli_commands.py', 25, 'test_themes_command')
+            location: ('sassy_ai/tests/test_cli_commands.py', 20, 'test_themes_command')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -1369,14 +1376,14 @@ args=()
           nextitem: <Function test_change_theme_invalid>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_change_theme_valid
-            location: ('sassy_ai/tests/test_cli_commands.py', 34, 'test_change_theme_valid')
+            location: ('sassy_ai/tests/test_cli_commands.py', 27, 'test_change_theme_valid')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_change_theme_valid>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_cli_commands.py'>
               request: <SubRequest 'runner' for <Function test_change_theme_valid>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628fee3a40> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da6cb7a0> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_change_theme_valid>
@@ -1386,7 +1393,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_valid' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_valid' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1403,7 +1410,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_valid' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_valid' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1422,12 +1429,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_valid' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_valid' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_change_theme_valid
-            location: ('sassy_ai/tests/test_cli_commands.py', 34, 'test_change_theme_valid')
+            location: ('sassy_ai/tests/test_cli_commands.py', 27, 'test_change_theme_valid')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -1435,14 +1442,14 @@ args=()
           nextitem: <Function test_exit_command>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_change_theme_invalid
-            location: ('sassy_ai/tests/test_cli_commands.py', 41, 'test_change_theme_invalid')
+            location: ('sassy_ai/tests/test_cli_commands.py', 33, 'test_change_theme_invalid')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_change_theme_invalid>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_cli_commands.py'>
               request: <SubRequest 'runner' for <Function test_change_theme_invalid>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628fee3710> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da7490a0> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_change_theme_invalid>
@@ -1452,7 +1459,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_invalid' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_invalid' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1469,7 +1476,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_invalid' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_invalid' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1488,12 +1495,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_invalid' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_change_theme_invalid' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_change_theme_invalid
-            location: ('sassy_ai/tests/test_cli_commands.py', 41, 'test_change_theme_invalid')
+            location: ('sassy_ai/tests/test_cli_commands.py', 33, 'test_change_theme_invalid')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -1501,14 +1508,14 @@ args=()
           nextitem: <Function test_invalid_command>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_exit_command
-            location: ('sassy_ai/tests/test_cli_commands.py', 48, 'test_exit_command')
+            location: ('sassy_ai/tests/test_cli_commands.py', 38, 'test_exit_command')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_exit_command>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_cli_commands.py'>
               request: <SubRequest 'runner' for <Function test_exit_command>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628ff44200> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da74a930> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_exit_command>
@@ -1518,7 +1525,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_exit_command' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_exit_command' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1535,7 +1542,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_exit_command' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_exit_command' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1554,12 +1561,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_exit_command' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_exit_command' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_exit_command
-            location: ('sassy_ai/tests/test_cli_commands.py', 48, 'test_exit_command')
+            location: ('sassy_ai/tests/test_cli_commands.py', 38, 'test_exit_command')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -1567,14 +1574,14 @@ args=()
           nextitem: <Function test_fix_typos>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_invalid_command
-            location: ('sassy_ai/tests/test_cli_commands.py', 55, 'test_invalid_command')
+            location: ('sassy_ai/tests/test_cli_commands.py', 50, 'test_invalid_command')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_invalid_command>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_cli_commands.py'>
               request: <SubRequest 'runner' for <Function test_invalid_command>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628ff44cb0> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da74b710> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_invalid_command>
@@ -1584,7 +1591,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_invalid_command' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_invalid_command' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1601,7 +1608,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_invalid_command' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_invalid_command' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1620,12 +1627,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_invalid_command' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_cli_commands.py::test_invalid_command' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_cli_commands.py::test_invalid_command
-            location: ('sassy_ai/tests/test_cli_commands.py', 55, 'test_invalid_command')
+            location: ('sassy_ai/tests/test_cli_commands.py', 50, 'test_invalid_command')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -1640,7 +1647,7 @@ args=()
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='engine' scope='function' baseid='sassy_ai/tests/test_engine.py'>
               request: <SubRequest 'engine' for <Function test_fix_typos>>
-          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x76628ff45d30> [hook]
+          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x71d8da754200> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_fix_typos>
@@ -1650,7 +1657,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_fix_typos' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_fix_typos' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1667,7 +1674,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_fix_typos' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_fix_typos' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1686,7 +1693,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_fix_typos' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_fix_typos' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -1706,7 +1713,7 @@ args=()
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='engine' scope='function' baseid='sassy_ai/tests/test_engine.py'>
               request: <SubRequest 'engine' for <Function test_detect_intent_general>>
-          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x76628ff45bb0> [hook]
+          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x71d8da74bd70> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_detect_intent_general>
@@ -1716,7 +1723,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_detect_intent_general' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_detect_intent_general' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1733,7 +1740,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_detect_intent_general' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_detect_intent_general' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1752,7 +1759,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_detect_intent_general' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_detect_intent_general' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -1772,7 +1779,7 @@ args=()
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='engine' scope='function' baseid='sassy_ai/tests/test_engine.py'>
               request: <SubRequest 'engine' for <Function test_get_reply_known>>
-          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x76628ff450d0> [hook]
+          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x71d8da754560> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_get_reply_known>
@@ -1782,7 +1789,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_known' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_known' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1799,7 +1806,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_known' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_known' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1818,7 +1825,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_known' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_known' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -1838,7 +1845,7 @@ args=()
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='engine' scope='function' baseid='sassy_ai/tests/test_engine.py'>
               request: <SubRequest 'engine' for <Function test_get_reply_unknown>>
-          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x76628ff45f70> [hook]
+          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x71d8da754830> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_get_reply_unknown>
@@ -1848,7 +1855,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_unknown' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_unknown' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1865,7 +1872,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_unknown' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_unknown' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1884,7 +1891,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_unknown' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_get_reply_unknown' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -1904,7 +1911,7 @@ args=()
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='engine' scope='function' baseid='sassy_ai/tests/test_engine.py'>
               request: <SubRequest 'engine' for <Function test_fallbacks>>
-          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x76628ff44a10> [hook]
+          finish pytest_fixture_setup --> <sassy_ai.sassy_core.engine.InsultEngine object at 0x71d8da6cb200> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_fallbacks>
@@ -1914,7 +1921,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_fallbacks' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_fallbacks' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1931,7 +1938,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_fallbacks' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_fallbacks' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -1950,7 +1957,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_engine.py::test_fallbacks' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_engine.py::test_fallbacks' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -1970,7 +1977,7 @@ args=()
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_main_cli.py'>
               request: <SubRequest 'runner' for <Function test_help_command>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628ff45dc0> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da6cb5f0> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_help_command>
@@ -1980,7 +1987,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_help_command' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_help_command' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -1997,7 +2004,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_help_command' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_help_command' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -2016,7 +2023,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_help_command' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_help_command' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
@@ -2029,14 +2036,14 @@ args=()
           nextitem: <Function test_change_theme>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_themes_command
-            location: ('sassy_ai/tests/test_main_cli.py', 19, 'test_themes_command')
+            location: ('sassy_ai/tests/test_main_cli.py', 20, 'test_themes_command')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_themes_command>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_main_cli.py'>
               request: <SubRequest 'runner' for <Function test_themes_command>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x766290e34110> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da74acc0> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_themes_command>
@@ -2046,7 +2053,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_command' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_command' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -2063,7 +2070,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_command' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_command' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -2082,12 +2089,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_command' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_command' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_themes_command
-            location: ('sassy_ai/tests/test_main_cli.py', 19, 'test_themes_command')
+            location: ('sassy_ai/tests/test_main_cli.py', 20, 'test_themes_command')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -2095,14 +2102,14 @@ args=()
           nextitem: <Function test_exit_command>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_change_theme
-            location: ('sassy_ai/tests/test_main_cli.py', 24, 'test_change_theme')
+            location: ('sassy_ai/tests/test_main_cli.py', 26, 'test_change_theme')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_change_theme>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_main_cli.py'>
               request: <SubRequest 'runner' for <Function test_change_theme>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628ff45580> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da755850> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_change_theme>
@@ -2112,7 +2119,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_change_theme' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_change_theme' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -2129,7 +2136,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_change_theme' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_change_theme' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -2148,12 +2155,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_change_theme' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_change_theme' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_change_theme
-            location: ('sassy_ai/tests/test_main_cli.py', 24, 'test_change_theme')
+            location: ('sassy_ai/tests/test_main_cli.py', 26, 'test_change_theme')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -2161,14 +2168,14 @@ args=()
           nextitem: <Function test_ask_question>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_exit_command
-            location: ('sassy_ai/tests/test_main_cli.py', 29, 'test_exit_command')
+            location: ('sassy_ai/tests/test_main_cli.py', 32, 'test_exit_command')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_exit_command>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_main_cli.py'>
               request: <SubRequest 'runner' for <Function test_exit_command>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628ff46ae0> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da756510> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_exit_command>
@@ -2178,7 +2185,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_exit_command' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_exit_command' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -2195,7 +2202,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_exit_command' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_exit_command' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -2214,12 +2221,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_exit_command' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_exit_command' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_exit_command
-            location: ('sassy_ai/tests/test_main_cli.py', 29, 'test_exit_command')
+            location: ('sassy_ai/tests/test_main_cli.py', 32, 'test_exit_command')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -2227,14 +2234,14 @@ args=()
           nextitem: <Function test_themes_and_mode_and_info_and_stats>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_ask_question
-            location: ('sassy_ai/tests/test_main_cli.py', 34, 'test_ask_question')
+            location: ('sassy_ai/tests/test_main_cli.py', 44, 'test_ask_question')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_ask_question>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_main_cli.py'>
               request: <SubRequest 'runner' for <Function test_ask_question>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628ff47a70> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da749250> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_ask_question>
@@ -2244,7 +2251,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_ask_question' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_ask_question' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -2261,7 +2268,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_ask_question' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_ask_question' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -2280,12 +2287,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_ask_question' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_ask_question' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_ask_question
-            location: ('sassy_ai/tests/test_main_cli.py', 34, 'test_ask_question')
+            location: ('sassy_ai/tests/test_main_cli.py', 44, 'test_ask_question')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -2293,14 +2300,14 @@ args=()
           nextitem: <Function test_random_changes_theme>
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_themes_and_mode_and_info_and_stats
-            location: ('sassy_ai/tests/test_main_cli.py', 39, 'test_themes_and_mode_and_info_and_stats')
+            location: ('sassy_ai/tests/test_main_cli.py', 52, 'test_themes_and_mode_and_info_and_stats')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_themes_and_mode_and_info_and_stats>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_main_cli.py'>
               request: <SubRequest 'runner' for <Function test_themes_and_mode_and_info_and_stats>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628ff47c20> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da754200> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_themes_and_mode_and_info_and_stats>
@@ -2310,7 +2317,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_and_mode_and_info_and_stats' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_and_mode_and_info_and_stats' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -2327,7 +2334,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_and_mode_and_info_and_stats' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_and_mode_and_info_and_stats' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -2346,12 +2353,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_and_mode_and_info_and_stats' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_themes_and_mode_and_info_and_stats' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_themes_and_mode_and_info_and_stats
-            location: ('sassy_ai/tests/test_main_cli.py', 39, 'test_themes_and_mode_and_info_and_stats')
+            location: ('sassy_ai/tests/test_main_cli.py', 52, 'test_themes_and_mode_and_info_and_stats')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
       pytest_runtest_protocol [hook]
@@ -2359,14 +2366,14 @@ args=()
           nextitem: None
         pytest_runtest_logstart [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_random_changes_theme
-            location: ('sassy_ai/tests/test_main_cli.py', 53, 'test_random_changes_theme')
+            location: ('sassy_ai/tests/test_main_cli.py', 60, 'test_random_changes_theme')
         finish pytest_runtest_logstart --> [] [hook]
         pytest_runtest_setup [hook]
             item: <Function test_random_changes_theme>
           pytest_fixture_setup [hook]
               fixturedef: <FixtureDef argname='runner' scope='function' baseid='sassy_ai/tests/test_main_cli.py'>
               request: <SubRequest 'runner' for <Function test_random_changes_theme>>
-          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x76628ff45a30> [hook]
+          finish pytest_fixture_setup --> <click.testing.CliRunner object at 0x71d8da757aa0> [hook]
         finish pytest_runtest_setup --> None [hook]
         pytest_runtest_makereport [hook]
             item: <Function test_random_changes_theme>
@@ -2376,7 +2383,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_random_changes_theme' when='setup' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_random_changes_theme' when='setup' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_call [hook]
@@ -2393,7 +2400,7 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_random_changes_theme' when='call' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_random_changes_theme' when='call' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('passed', '.', 'PASSED') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_teardown [hook]
@@ -2412,12 +2419,12 @@ args=()
             report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_random_changes_theme' when='teardown' outcome='passed'>
           pytest_report_teststatus [hook]
               report: <TestReport 'sassy_ai/tests/test_main_cli.py::test_random_changes_theme' when='teardown' outcome='passed'>
-              config: <_pytest.config.Config object at 0x766291221e50>
+              config: <_pytest.config.Config object at 0x71d8db9493d0>
           finish pytest_report_teststatus --> ('', '', '') [hook]
         finish pytest_runtest_logreport --> [] [hook]
         pytest_runtest_logfinish [hook]
             nodeid: sassy_ai/tests/test_main_cli.py::test_random_changes_theme
-            location: ('sassy_ai/tests/test_main_cli.py', 53, 'test_random_changes_theme')
+            location: ('sassy_ai/tests/test_main_cli.py', 60, 'test_random_changes_theme')
         finish pytest_runtest_logfinish --> [] [hook]
       finish pytest_runtest_protocol --> True [hook]
     finish pytest_runtestloop --> True [hook]
@@ -2425,11 +2432,11 @@ args=()
         session: <Session  exitstatus=0 testsfailed=0 testscollected=18>
         exitstatus: 0
       pytest_terminal_summary [hook]
-          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x766290e496d0>
+          terminalreporter: <_pytest.terminal.TerminalReporter object at 0x71d8dabb56d0>
           exitstatus: 0
-          config: <_pytest.config.Config object at 0x766291221e50>
+          config: <_pytest.config.Config object at 0x71d8db9493d0>
       finish pytest_terminal_summary --> [] [hook]
     finish pytest_sessionfinish --> [] [hook]
     pytest_unconfigure [hook]
-        config: <_pytest.config.Config object at 0x766291221e50>
+        config: <_pytest.config.Config object at 0x71d8db9493d0>
     finish pytest_unconfigure --> [] [hook]

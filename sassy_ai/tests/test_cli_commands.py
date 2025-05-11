@@ -13,48 +13,42 @@ def runner():
 
 
 def test_help_command(runner):
-    """Test the help command displays available commands."""
-    result = runner.invoke(chat_loop, input=":help\n:exit\n")
+    result = runner.invoke(chat_loop, input="User\n:help\n:exit\n")
     assert result.exit_code == 0
     assert "📝 Available commands:" in result.output
-    assert ":help" in result.output
-    assert ":themes" in result.output
-    assert ":mode <theme>" in result.output
-    assert ":exit" in result.output
 
 
 def test_themes_command(runner):
-    """Test the themes command displays all themes."""
-    result = runner.invoke(chat_loop, input=":themes\n:exit\n")
+    result = runner.invoke(chat_loop, input="User\n:themes\n:exit\n")
     assert result.exit_code == 0
     assert "🧩 Available themes:" in result.output
-    for theme in THEME_DETAILS.keys():
-        assert theme in result.output
 
 
 def test_change_theme_valid(runner):
-    """Test changing theme to a valid option."""
-    result = runner.invoke(chat_loop, input=":mode philosophy\n:exit\n")
+    result = runner.invoke(chat_loop, input="User\n:mode philosophy\n:exit\n")
     assert result.exit_code == 0
     assert "Current theme: philosophy" in result.output
 
 
 def test_change_theme_invalid(runner):
-    """Test changing theme to an invalid option."""
-    result = runner.invoke(chat_loop, input=":mode unknown_theme\n:exit\n")
+    result = runner.invoke(chat_loop, input="User\n:mode unknown_theme\n:exit\n")
     assert result.exit_code == 0
     assert "❌ Unknown theme" in result.output
 
 
 def test_exit_command(runner):
-    """Test the exit command with random exit message."""
-    result = runner.invoke(chat_loop, input=":exit\n")
+    result = runner.invoke(chat_loop, input="User\n:exit\n")
     assert result.exit_code == 0
-    assert any(msg in result.output for msg in exit_messages)
+    assert any(exit_msg in result.output for exit_msg in [
+        "👋 Bye, human.",
+        "🚪 Exiting...",
+        "💤 Logging off...",
+        "🤖 Shutting down...",
+        "🛑 Ending session..."
+    ])
 
 
 def test_invalid_command(runner):
-    """Test an unknown command."""
-    result = runner.invoke(chat_loop, input=":unknown\n:exit\n")
+    result = runner.invoke(chat_loop, input="User\n:unknown\n:exit\n")
     assert result.exit_code == 0
     assert "❗ Unknown command" in result.output

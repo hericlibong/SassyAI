@@ -45,6 +45,24 @@ thinking_messages = [
 
 prompt_variations = [" You > ", " Tell me: ", " Speak up: ", " Your move: "]
 
+# Liste de messages d'accueil variés
+welcome_messages = [
+    "🎉 Welcome to SassyAI — The Judgy Assistant!",
+    "😈 Ready to be roasted by AI? Let's begin!",
+    "💡 Ask your question... if you dare.",
+    "😎 Another human looking for wisdom? Good luck!! 😜",
+    "🤖 Ah, another brave soul entering the lair of sarcasm!"
+]
+
+# Liste de citations sarcastiques
+sarcastic_quotes = [
+    "If sarcasm were an Olympic sport, I'd be a gold medalist.",
+    "My IQ is far beyond your mortal comprehension.",
+    "I could help you, but where’s the fun in that?",
+    "I'm not always sarcastic. Sometimes I'm asleep.",
+    "Why think when you can just guess and hope for the best?"
+]
+
 
 # ──────────────────────────────────────────
 def thinking_effect():
@@ -60,17 +78,42 @@ def thinking_effect():
         time.sleep(random.uniform(0.7, 1.6))
 
 
+def show_welcome_message():
+    """Affiche un message d'accueil varié et une citation sarcastique."""
+    console.print(random.choice(welcome_messages), style="bold cyan")
+    console.print(f"🤖 Version: 1.0.0 | Themes available: {len(THEME_DETAILS)}", style="yellow")
+    console.print(f"💬 Sarcastic wisdom: {random.choice(sarcastic_quotes)}", style="magenta")
+
+
+def print_reply(reply):
+    """Affiche la réponse de SassyAI avec des effets visuels."""
+    mood_emoji = random.choice(["😏", "😂", "🙄", "😈", "🤖", "😜", "😅", "😡"])
+    theme_emoji = THEME_DETAILS[current_theme]["emoji"]
+    theme_color = THEME_DETAILS[current_theme]["color"]
+    formatted_reply = f"[italic] {reply}[/]"  # Ajouter un effet italique
+
+    console.print(f"{theme_emoji} [bold {theme_color}]SassyAI:[/] [bold]{formatted_reply}[/] {mood_emoji}")
+
+
 # ──────────────────────────────────────────
+
+
 @click.command()
 def chat_loop():
-    console.print("🎉 [bold cyan]Welcome to SassyAI — The Judgy Assistant[/]")
-    console.print("🤖 Type ':themes' for list, ':mode <theme>' to switch, ':help' for help.", style="blue")
+    """Boucle interactive pour interagir avec SassyAI."""
+    # Demande du prénom ou du pseudo au démarrage
+    user_name = click.prompt("👤 Enter your name or nickname", default="User", show_default=True)
+
+    # Affichage personnalisé avec le nom
+    show_welcome_message()
+    console.print(f"🤖 Welcome, [bold yellow]{user_name}[/]! Type ':themes' for list, ':mode <theme>' to switch, ':help' for help.", style="blue")
+    time.sleep(random.uniform(0.7, 1.6))
     show_current_theme_banner()
 
     while True:
         prompt_suffix = random.choice(prompt_variations)
         user_input = click.prompt(
-            f"{THEME_DETAILS[current_theme]['emoji']} [{current_theme}]", prompt_suffix=prompt_suffix, show_default=False
+            f"{THEME_DETAILS[current_theme]['emoji']} [{user_name} - {current_theme}]", prompt_suffix=prompt_suffix, show_default=False
         )
 
         if user_input.startswith(":"):
@@ -81,11 +124,11 @@ def chat_loop():
             thinking_effect()
             reply = engine.get_reply(user_input, current_theme=current_theme)
             theme_usage[current_theme] += 1
-            console.print(f"💬 {THEME_DETAILS[current_theme]['emoji']} [bold {THEME_DETAILS[current_theme]['color']}]SassyAI:[/] {reply}")
+            print_reply(reply)  # Utilisation de la fonction d'affichage centralisée
         else:
             thinking_effect()
             default_reply = engine.get_reply(THEME_DETAILS[current_theme]["prompt"], current_theme=current_theme)
-            console.print(f"💬 {THEME_DETAILS[current_theme]['emoji']} [bold {THEME_DETAILS[current_theme]['color']}]SassyAI:[/] {default_reply}")
+            print_reply(default_reply)  # Utilisation de la fonction d'affichage centralisée
 
 
 # ──────────────────────────────────────────
@@ -95,24 +138,43 @@ def show_current_theme_banner():
     console.rule(f"{emoji} [bold {color}]Current theme: {current_theme}[/]")
 
 
+def show_themes():
+    """Affiche les thèmes disponibles avec un affichage amélioré."""
+    console.print("🧩 [bold cyan]Available themes:[/]")
+    sorted_themes = sorted(THEME_DETAILS.keys())  # Trier par ordre alphabétique
+    for index, key in enumerate(sorted_themes, start=1):
+        mark = "✅" if key == current_theme else " "
+        emoji = THEME_DETAILS[key]['emoji']
+        color = THEME_DETAILS[key]['color']
+        console.print(f"{index}. {emoji} [bold {color}]{key}[/] {mark}")
+
+
+def show_help():
+    """Affiche les commandes disponibles avec une description enrichie."""
+    console.print("\n📝 [bold cyan]Available commands:[/]")
+    command_list = [
+        (":help", "Show this help message"),
+        (":themes", "List available themes"),
+        (":mode <theme>", "Switch current theme"),
+        (":random", "Switch to a random theme"),
+        (":stats", "Show theme usage statistics"),
+        (":info", "Show info about current theme"),
+        (":exit", "Exit the application")
+    ]
+
+    for command, description in command_list:
+        console.print(f"  [bold yellow]{command:<15}[/] - {description}")
+    console.print("\n💡 [bold magenta]Tip:[/] Use ':themes' to explore all available themes.\n")
+
+
 def process_command(command: str):
     global current_theme
 
     if command == ":help":
-        console.print("📝 [bold cyan]Available commands:[/]")
-        console.print("  • :help     Show this help message")
-        console.print("  • :themes   List available themes")
-        console.print("  • :mode <theme>  Switch current theme")
-        console.print("  • :random   Switch to a random theme")
-        console.print("  • :stats    Show theme usage statistics")
-        console.print("  • :info     Show info about current theme")
-        console.print("  • :exit     Exit the application")
+        show_help()
 
     elif command == ":themes":
-        console.print("🧩 [bold cyan]Available themes:[/]")
-        for key in THEME_DETAILS:
-            mark = "✅" if key == current_theme else " "
-            console.print(f" {mark} {THEME_DETAILS[key]['emoji']} {key}", style=THEME_DETAILS[key]["color"])
+        show_themes()
 
     elif command.startswith(":mode "):
         theme = command.split(" ")[1]
