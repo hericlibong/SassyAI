@@ -104,10 +104,7 @@ python sassy_ai/main_cli.py
 
 
 ### 🎬 Demo Video
-<video width="640" height="360" controls>
-    <source src="https://raw.githubusercontent.com/hericlibong/SassyAI/main/media/demovideo.webm" type="video/webm">
-    Your browser does not support the video tag.
-</video>
+{% embed https://www.youtube.com/watch?v=OYcGW34V-7M %}
 
 
 ## Logging
