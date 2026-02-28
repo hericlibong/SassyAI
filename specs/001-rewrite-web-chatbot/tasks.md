@@ -28,11 +28,11 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 
 **Purpose**: Initialize the backend/frontend workspace for the MVP rewrite
 
-- [ ] T001 Create backend package skeleton in `backend/src/__init__.py`, `backend/src/api/__init__.py`, `backend/src/chat/__init__.py`, `backend/src/llm/__init__.py`, `backend/src/safety/__init__.py`, `backend/src/observability/__init__.py`, and `backend/src/config/__init__.py`
-- [ ] T002 Create backend test package skeleton in `backend/tests/contract/__init__.py`, `backend/tests/integration/__init__.py`, and `backend/tests/unit/__init__.py`
-- [ ] T003 [P] Create frontend chat app shell in `frontend/src/index.html`, `frontend/src/app/main.js`, `frontend/src/chat/chat-app.js`, and `frontend/src/services/chat_api.js`
-- [ ] T004 [P] Add backend dependency and test runner manifests in `backend/requirements.txt` and `backend/pytest.ini`
-- [ ] T005 [P] Add frontend styling and smoke test placeholders in `frontend/src/styles.css` and `frontend/tests/smoke/chat_mvp_smoke.md`
+- [x] T001 Create backend package skeleton in `backend/src/__init__.py`, `backend/src/api/__init__.py`, `backend/src/chat/__init__.py`, `backend/src/llm/__init__.py`, `backend/src/safety/__init__.py`, `backend/src/observability/__init__.py`, and `backend/src/config/__init__.py`
+- [x] T002 Create backend test package skeleton in `backend/tests/contract/__init__.py`, `backend/tests/integration/__init__.py`, and `backend/tests/unit/__init__.py`
+- [x] T003 [P] Create frontend chat app shell in `frontend/src/index.html`, `frontend/src/app/main.js`, `frontend/src/chat/chat-app.js`, and `frontend/src/services/chat_api.js`
+- [x] T004 [P] Add backend dependency and test runner manifests in `backend/requirements.txt` and `backend/pytest.ini`
+- [x] T005 [P] Add frontend styling and smoke test placeholders in `frontend/src/styles.css` and `frontend/tests/smoke/chat_mvp_smoke.md`
 
 ---
 
