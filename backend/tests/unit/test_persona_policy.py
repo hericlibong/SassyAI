@@ -1,4 +1,4 @@
-from backend.src.safety.policy import get_sarcasm_instruction, is_valid_sarcasm_level
+from src.safety.policy import get_sarcasm_instruction, is_valid_sarcasm_level
 
 
 def test_persona_policy_supports_all_required_sarcasm_levels() -> None:

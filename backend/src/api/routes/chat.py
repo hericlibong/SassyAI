@@ -17,7 +17,7 @@ _chat_service = ChatService(
 
 
 @router.post("/api/chat", response_model=ChatResponse)
-def create_chat_reply(payload: ChatRequest) -> ChatResponse:
+async def create_chat_reply(payload: ChatRequest) -> ChatResponse:
     result = _chat_service.create_reply(
         provider_name="openai",
         message=payload.message,

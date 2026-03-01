@@ -1,6 +1,6 @@
 import pytest
 
-from backend.src.llm.providers import ProviderRegistry, ProviderRequest
+from src.llm.providers import ProviderRegistry, ProviderRequest
 
 
 class TimeoutProvider:

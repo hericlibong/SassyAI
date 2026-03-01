@@ -1,13 +1,14 @@
-from fastapi.testclient import TestClient
+import httpx
+import pytest
 
-from backend.src.api.app import app
-
-
-client = TestClient(app)
+from src.api.app import app
 
 
-def test_health_endpoint_returns_ok_status() -> None:
-    response = client.get("/api/health")
+@pytest.mark.anyio
+async def test_health_endpoint_returns_ok_status() -> None:
+    transport = httpx.ASGITransport(app=app)
+    async with httpx.AsyncClient(transport=transport, base_url="http://testserver") as client:
+        response = await client.get("/api/health")
 
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}

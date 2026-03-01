@@ -1,4 +1,4 @@
-from backend.src.safety.policy import evaluate_safety
+from src.safety.policy import evaluate_safety
 
 
 def test_safety_policy_refuses_harassment_against_protected_characteristics() -> None:

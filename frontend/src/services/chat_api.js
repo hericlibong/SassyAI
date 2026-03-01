@@ -1,4 +1,4 @@
-const CHAT_API_PATH = "/api/chat";
+const CHAT_API_PATH = "http://127.0.0.1:8000/api/chat";
 
 export async function sendChatMessage({ message, sarcasmLevel, sessionId } = {}) {
   const response = await fetch(CHAT_API_PATH, {

@@ -1,4 +1,4 @@
-from backend.src.observability.logger import (
+from src.observability.logger import (
     build_latency_event,
     build_provider_error_event,
 )
