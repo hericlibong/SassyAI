@@ -119,7 +119,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T033 [P] [US3] Extend moderation rules for refusal and neutralization decisions in `backend/src/safety/policy.py`
+- [x] T033 [P] [US3] Extend moderation rules for refusal and neutralization decisions in `backend/src/safety/policy.py`
 - [ ] T034 [US3] Apply refusal and neutralization classifications in `backend/src/chat/service.py`
 - [ ] T035 [US3] Render refusal and neutralized states in `frontend/src/chat/chat-app.js`
 

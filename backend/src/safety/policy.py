@@ -20,6 +20,19 @@ HARASSMENT_TERMS: tuple[str, ...] = (
     "insult",
     "dehumanize",
 )
+REFUSAL_TRIGGER_TERMS: tuple[str, ...] = (
+    "kill",
+    "hurt",
+    "attack",
+    "dehumanize",
+    "harass",
+)
+NEUTRALIZATION_TRIGGER_TERMS: tuple[str, ...] = (
+    "stereotype",
+    "mock",
+    "joke about",
+    "sarcastic about",
+)
 
 
 def is_valid_sarcasm_level(level: str) -> bool:
@@ -41,9 +54,15 @@ def evaluate_safety(user_text: str) -> SafetyAction:
         term in normalized for term in PROTECTED_CHARACTERISTIC_TERMS
     )
     has_harassment_reference = any(term in normalized for term in HARASSMENT_TERMS)
+    has_refusal_trigger = any(term in normalized for term in REFUSAL_TRIGGER_TERMS)
+    has_neutralization_trigger = any(
+        term in normalized for term in NEUTRALIZATION_TRIGGER_TERMS
+    )
 
-    if has_protected_reference and has_harassment_reference:
+    if has_protected_reference and (has_harassment_reference or has_refusal_trigger):
         return "refuse"
+    if has_protected_reference and has_neutralization_trigger:
+        return "neutralize"
     if has_protected_reference:
         return "neutralize"
     return "allow"
