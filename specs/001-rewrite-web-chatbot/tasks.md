@@ -92,7 +92,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 
 ### Tests for User Story 2 (REQUIRED) ⚠️
 
-- [ ] T025 [P] [US2] Add provider adapter timeout and error unit tests in `backend/tests/unit/test_provider_adapter.py`
+- [x] T025 [P] [US2] Add provider adapter timeout and error unit tests in `backend/tests/unit/test_provider_adapter.py`
 - [ ] T026 [P] [US2] Add fallback API integration test in `backend/tests/integration/test_chat_fallback.py`
 
 ### Implementation for User Story 2
