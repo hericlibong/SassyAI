@@ -68,7 +68,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
 - [x] T016 [P] [US1] Add POST `/api/chat` contract test in `backend/tests/contract/test_chat_api_contract.py`
-- [ ] T017 [P] [US1] Add multi-turn API chat flow integration test in `backend/tests/integration/test_chat_flow.py`
+- [x] T017 [P] [US1] Add multi-turn API chat flow integration test in `backend/tests/integration/test_chat_flow.py`
 - [ ] T018 [P] [US1] Add persona policy unit test for low/medium/high behavior in `backend/tests/unit/test_persona_policy.py`
 
 ### Implementation for User Story 1
