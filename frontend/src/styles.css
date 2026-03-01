@@ -1,0 +1,54 @@
+:root {
+  color-scheme: light;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f4f1e8;
+  color: #1f1a17;
+}
+
+body.sassyai-ready {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.chat-shell {
+  width: min(100%, 720px);
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #d7c8b7;
+  border-radius: 1rem;
+  background: #fffaf2;
+}
+
+.chat-shell form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+}
+
+.chat-shell input,
+.chat-shell select,
+.chat-shell button {
+  font: inherit;
+}
+
+[data-role="transcript"] {
+  min-height: 12rem;
+  padding: 1rem;
+  border: 1px solid #e5d8ca;
+  border-radius: 0.75rem;
+  background: #ffffff;
+}

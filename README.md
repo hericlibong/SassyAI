@@ -8,6 +8,10 @@
 
 SassyAI is a sarcastic assistant designed to answer questions with witty, snarky, and ironic remarks. This project was developed as part of the **Amazon Q Developer - Quack the Code** challenge. The goal is to demonstrate the ability to integrate Amazon Q to generate automated and sarcastic responses while providing an interactive experience via a command-line interface (CLI).
 
+> V2 direction (active): SassyAI is being rewritten as a web LLM chatbot with one frontend chat UI
+> and one backend chat service. The CLI is deprecated and out of scope for new product work under
+> `.specify/memory/constitution.md`.
+
 ## Features
 
 * Sarcastic responses on various themes: general, code, philosophy, food, artificial intelligence, sports, politics, nerd culture, dark humor, and TV series.
@@ -45,7 +49,28 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Launching the Application
+### V2 MVP Backend Setup
+
+For the web chatbot MVP backend, install the dedicated backend dependencies:
+
+```bash
+pip install -r backend/requirements.txt
+```
+
+### V2 MVP Environment Variables
+
+Set the provider configuration before running the backend service:
+
+```bash
+export SASSYAI_LLM_PROVIDER=openai
+export SASSYAI_MODEL_NAME=gpt-4o-mini
+export SASSYAI_PROVIDER_TIMEOUT_SECONDS=10
+export SASSYAI_OPENAI_API_KEY=your-provider-key
+```
+
+The MVP expects the persona files to remain versioned in `backend/persona/`.
+
+## Launching the Legacy CLI (Deprecated)
 
 To start the application, run the following command:
 
@@ -60,7 +85,8 @@ cd sassy_ai
 python main_cli.py
 ```
 
-The application will start in interactive mode, allowing you to ask questions or change the theme during the session.
+The application will start in interactive mode, allowing you to ask questions or change the theme
+during the session. This CLI flow is legacy and kept for reference during the V2 web rewrite.
 
 ### CLI Commands
 
@@ -194,6 +220,8 @@ The current test coverage is approximately 90%. Some edge cases are still under 
 ## Contribution
 
 Contributions are welcome. If you have ideas to enhance SassyAI, feel free to submit Pull Requests or Issues.
+Contributors MUST follow the engineering governance defined in `.specify/memory/constitution.md`,
+including V2 web scope, persona prompt governance, provider abstraction, and safety requirements.
 
 ## License
 

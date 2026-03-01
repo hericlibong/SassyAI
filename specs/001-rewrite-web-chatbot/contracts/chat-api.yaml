@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: SassyAI V2 Chat API
+  version: 0.1.0
+  description: Minimal MVP contract for the web chatbot backend.
+servers:
+  - url: http://localhost:8000
+paths:
+  /api/health:
+    get:
+      summary: Health check
+      operationId: getHealth
+      responses:
+        '200':
+          description: Service is reachable.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status]
+                properties:
+                  status:
+                    type: string
+                    enum: [ok]
+  /api/chat:
+    post:
+      summary: Send a chat message and receive a reply
+      operationId: createChatReply
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: Reply generated successfully or safely constrained.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+        '400':
+          description: Invalid request payload such as empty message or unsupported sarcasm level.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    ChatRequest:
+      type: object
+      required:
+        - message
+        - sarcasm_level
+      properties:
+        session_id:
+          type: string
+          description: Existing active session identifier. Omit to start a new session.
+        message:
+          type: string
+          minLength: 1
+          description: Latest user message.
+        sarcasm_level:
+          type: string
+          enum: [low, medium, high]
+          description: Desired sarcasm calibration for the reply.
+    ChatResponse:
+      type: object
+      required:
+        - session_id
+        - reply
+        - classification
+        - sarcasm_level
+        - message_count
+      properties:
+        session_id:
+          type: string
+        reply:
+          type: string
+          description: Assistant reply text, including safe fallback or refusal copy when needed.
+        classification:
+          type: string
+          enum: [normal, refused, neutralized, fallback]
+        sarcasm_level:
+          type: string
+          enum: [low, medium, high]
+        message_count:
+          type: integer
+          minimum: 1
+    ErrorResponse:
+      type: object
+      required:
+        - error
+        - message
+      properties:
+        error:
+          type: string
+          enum: [invalid_request]
+        message:
+          type: string
