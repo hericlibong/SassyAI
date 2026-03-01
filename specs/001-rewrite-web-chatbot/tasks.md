@@ -44,7 +44,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 
 - [x] T006 Define shared request and response schemas in `backend/src/api/schemas.py`
 - [x] T007 [P] Add versioned persona assets in `backend/persona/system_prompt.md` and `backend/persona/few_shot_examples.yaml`
-- [ ] T008 [P] Implement persona asset loader in `backend/src/chat/persona_loader.py`
+- [x] T008 [P] Implement persona asset loader in `backend/src/chat/persona_loader.py`
 - [ ] T009 [P] Implement provider adapter interface and provider registry in `backend/src/llm/providers.py`
 - [ ] T010 [P] Implement environment-based runtime settings in `backend/src/config/settings.py`
 - [ ] T011 [P] Implement in-memory session repository for active conversations in `backend/src/chat/session_store.py`
