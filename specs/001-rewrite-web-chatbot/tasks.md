@@ -114,7 +114,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 
 ### Tests for User Story 3 (REQUIRED) ⚠️
 
-- [ ] T031 [P] [US3] Add safety policy unit tests for protected-characteristic cases in `backend/tests/unit/test_safety_policy.py`
+- [x] T031 [P] [US3] Add safety policy unit tests for protected-characteristic cases in `backend/tests/unit/test_safety_policy.py`
 - [ ] T032 [P] [US3] Add safety refusal integration test in `backend/tests/integration/test_chat_safety.py`
 
 ### Implementation for User Story 3
