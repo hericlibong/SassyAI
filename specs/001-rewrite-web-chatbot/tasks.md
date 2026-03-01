@@ -97,7 +97,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T027 [P] [US2] Implement primary provider adapter with timeout handling in `backend/src/llm/openai_provider.py`
+- [x] T027 [P] [US2] Implement primary provider adapter with timeout handling in `backend/src/llm/openai_provider.py`
 - [ ] T028 [US2] Extend runtime provider selection and timeout configuration in `backend/src/config/settings.py`
 - [ ] T029 [US2] Apply fallback classification and retry-safe session behavior in `backend/src/chat/service.py`
 - [ ] T030 [US2] Render fallback state messaging in `frontend/src/chat/chat-app.js`
