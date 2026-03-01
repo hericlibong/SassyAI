@@ -78,7 +78,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 - [x] T021 [P] [US1] Implement browser API client for chat requests in `frontend/src/services/chat_api.js`
 - [x] T022 [P] [US1] Implement chat transcript UI and sarcasm level selector in `frontend/src/chat/chat-app.js`
 - [x] T023 [US1] Wire backend route registration in `backend/src/api/app.py`
-- [ ] T024 [US1] Wire frontend bootstrap and layout assets in `frontend/src/app/main.js`, `frontend/src/index.html`, and `frontend/src/styles.css`
+- [x] T024 [US1] Wire frontend bootstrap and layout assets in `frontend/src/app/main.js`, `frontend/src/index.html`, and `frontend/src/styles.css`
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
