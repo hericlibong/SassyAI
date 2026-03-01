@@ -76,7 +76,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 - [x] T019 [P] [US1] Implement chat orchestration service for normal replies in `backend/src/chat/service.py`
 - [x] T020 [P] [US1] Implement chat API route handler in `backend/src/api/routes/chat.py`
 - [x] T021 [P] [US1] Implement browser API client for chat requests in `frontend/src/services/chat_api.js`
-- [ ] T022 [P] [US1] Implement chat transcript UI and sarcasm level selector in `frontend/src/chat/chat-app.js`
+- [x] T022 [P] [US1] Implement chat transcript UI and sarcasm level selector in `frontend/src/chat/chat-app.js`
 - [ ] T023 [US1] Wire backend route registration in `backend/src/api/app.py`
 - [ ] T024 [US1] Wire frontend bootstrap and layout assets in `frontend/src/app/main.js`, `frontend/src/index.html`, and `frontend/src/styles.css`
 
