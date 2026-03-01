@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+from .fallbacks import get_provider_error_fallback, get_timeout_fallback
 from .persona_loader import load_persona_assets
 from .session_store import ChatSession, InMemorySessionStore
 from ..llm.providers import ProviderRegistry, ProviderRequest
@@ -36,18 +37,27 @@ class ChatService:
         session = self._session_store.get_or_create(session_id, sarcasm_level)
         session.add_message(role="user", content=message)
 
-        reply = self._generate_normal_reply(
-            session=session,
-            provider_name=provider_name,
-            message=message,
-            sarcasm_level=sarcasm_level,
-        )
-        session.add_message(role="assistant", content=reply, classification="normal")
+        try:
+            reply = self._generate_normal_reply(
+                session=session,
+                provider_name=provider_name,
+                message=message,
+                sarcasm_level=sarcasm_level,
+            )
+            classification = "normal"
+        except TimeoutError:
+            reply = get_timeout_fallback()
+            classification = "fallback"
+        except Exception:
+            reply = get_provider_error_fallback()
+            classification = "fallback"
+
+        session.add_message(role="assistant", content=reply, classification=classification)
 
         return ChatServiceResponse(
             session_id=session.session_id,
             reply=reply,
-            classification="normal",
+            classification=classification,
             sarcasm_level=session.sarcasm_level,
             message_count=len(session.messages),
         )
