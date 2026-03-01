@@ -32,12 +32,13 @@ export function mountChatApp(root) {
   const input = form?.querySelector('input[name="message"]');
   const sarcasmLevel = root.querySelector('[data-role="sarcasm-level"]');
 
-  const appendMessage = (role, content) => {
+  const appendMessage = (role, content, classification = "normal") => {
     if (!transcript) {
       return;
     }
     const item = document.createElement("p");
-    item.textContent = `${role}: ${content}`;
+    const prefix = classification === "fallback" ? `${role} [fallback]` : role;
+    item.textContent = `${prefix}: ${content}`;
     transcript.appendChild(item);
   };
 
@@ -59,11 +60,11 @@ export function mountChatApp(root) {
         sessionId,
       });
       sessionId = payload.session_id;
-      appendMessage("SassyAI", payload.reply);
+      appendMessage("SassyAI", payload.reply, payload.classification);
     } catch (error) {
       const messageText =
         error instanceof Error ? error.message : "Chat request failed.";
-      appendMessage("SassyAI", messageText);
+      appendMessage("SassyAI", messageText, "fallback");
     }
   });
 }
