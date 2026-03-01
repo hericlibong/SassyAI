@@ -37,7 +37,13 @@ export function mountChatApp(root) {
       return;
     }
     const item = document.createElement("p");
-    const prefix = classification === "fallback" ? `${role} [fallback]` : role;
+    const labels = {
+      fallback: "[fallback]",
+      refused: "[refused]",
+      neutralized: "[neutralized]",
+    };
+    const stateLabel = labels[classification] ? ` ${labels[classification]}` : "";
+    const prefix = `${role}${stateLabel}`;
     item.textContent = `${prefix}: ${content}`;
     transcript.appendChild(item);
   };
