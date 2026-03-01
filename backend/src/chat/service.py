@@ -4,7 +4,7 @@ from .fallbacks import get_provider_error_fallback, get_timeout_fallback
 from .persona_loader import load_persona_assets
 from .session_store import ChatSession, InMemorySessionStore
 from ..llm.providers import ProviderRegistry, ProviderRequest
-from ..safety.policy import get_sarcasm_instruction
+from ..safety.policy import evaluate_safety, get_sarcasm_instruction
 
 
 @dataclass(frozen=True)
@@ -37,20 +37,28 @@ class ChatService:
         session = self._session_store.get_or_create(session_id, sarcasm_level)
         session.add_message(role="user", content=message)
 
-        try:
-            reply = self._generate_normal_reply(
-                session=session,
-                provider_name=provider_name,
-                message=message,
-                sarcasm_level=sarcasm_level,
-            )
-            classification = "normal"
-        except TimeoutError:
-            reply = get_timeout_fallback()
-            classification = "fallback"
-        except Exception:
-            reply = get_provider_error_fallback()
-            classification = "fallback"
+        safety_action = evaluate_safety(message)
+        if safety_action == "refuse":
+            reply = "No. I am not helping with hateful or harassing attacks on protected groups."
+            classification = "refused"
+        elif safety_action == "neutralize":
+            reply = "Nice try. I am keeping this neutral instead of turning it into targeted abuse."
+            classification = "neutralized"
+        else:
+            try:
+                reply = self._generate_normal_reply(
+                    session=session,
+                    provider_name=provider_name,
+                    message=message,
+                    sarcasm_level=sarcasm_level,
+                )
+                classification = "normal"
+            except TimeoutError:
+                reply = get_timeout_fallback()
+                classification = "fallback"
+            except Exception:
+                reply = get_provider_error_fallback()
+                classification = "fallback"
 
         session.add_message(role="assistant", content=reply, classification=classification)
 
