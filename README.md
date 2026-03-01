@@ -49,6 +49,27 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+### V2 MVP Backend Setup
+
+For the web chatbot MVP backend, install the dedicated backend dependencies:
+
+```bash
+pip install -r backend/requirements.txt
+```
+
+### V2 MVP Environment Variables
+
+Set the provider configuration before running the backend service:
+
+```bash
+export SASSYAI_LLM_PROVIDER=openai
+export SASSYAI_MODEL_NAME=gpt-4o-mini
+export SASSYAI_PROVIDER_TIMEOUT_SECONDS=10
+export SASSYAI_OPENAI_API_KEY=your-provider-key
+```
+
+The MVP expects the persona files to remain versioned in `backend/persona/`.
+
 ## Launching the Legacy CLI (Deprecated)
 
 To start the application, run the following command:
