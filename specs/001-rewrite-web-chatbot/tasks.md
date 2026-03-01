@@ -51,7 +51,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 - [x] T012 Implement baseline safety policy rules and sarcasm-level definitions in `backend/src/safety/policy.py`
 - [x] T013 Implement fallback response helpers for timeout and provider errors in `backend/src/chat/fallbacks.py`
 - [x] T014 Implement redacted latency/error logging utilities in `backend/src/observability/logger.py`
-- [ ] T015 Implement backend application factory and health endpoint in `backend/src/api/app.py` and `backend/src/api/routes/health.py`
+- [x] T015 Implement backend application factory and health endpoint in `backend/src/api/app.py` and `backend/src/api/routes/health.py`
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
