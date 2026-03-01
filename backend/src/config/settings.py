@@ -12,6 +12,7 @@ class Settings:
     llm_provider: str
     model_name: str
     provider_timeout_seconds: float
+    provider_api_key: str | None
 
 
 def load_settings() -> Settings:
@@ -30,8 +31,12 @@ def load_settings() -> Settings:
     if timeout_seconds <= 0:
         raise ValueError("SASSYAI_PROVIDER_TIMEOUT_SECONDS must be greater than zero")
 
+    provider_key_env = f"SASSYAI_{provider.upper()}_API_KEY"
+    provider_api_key = os.getenv(provider_key_env, "").strip() or None
+
     return Settings(
         llm_provider=provider,
         model_name=model_name,
         provider_timeout_seconds=timeout_seconds,
+        provider_api_key=provider_api_key,
     )
