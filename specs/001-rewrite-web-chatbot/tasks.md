@@ -131,7 +131,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 
 **Purpose**: Finalize cross-story quality, docs, and validation support
 
-- [ ] T036 [P] Add health endpoint contract coverage in `backend/tests/contract/test_health_api_contract.py`
+- [x] T036 [P] Add health endpoint contract coverage in `backend/tests/contract/test_health_api_contract.py`
 - [ ] T037 [P] Add observability redaction tests in `backend/tests/unit/test_observability_logger.py`
 - [ ] T038 [P] Document local setup and environment variables in `README.md`
 - [ ] T039 [P] Record MVP quickstart verification notes in `frontend/tests/smoke/chat_mvp_smoke.md`
