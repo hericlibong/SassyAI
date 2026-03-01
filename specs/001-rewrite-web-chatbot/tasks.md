@@ -46,7 +46,7 @@ description: "Task list for SassyAI V2 Web Chatbot MVP implementation"
 - [x] T007 [P] Add versioned persona assets in `backend/persona/system_prompt.md` and `backend/persona/few_shot_examples.yaml`
 - [x] T008 [P] Implement persona asset loader in `backend/src/chat/persona_loader.py`
 - [x] T009 [P] Implement provider adapter interface and provider registry in `backend/src/llm/providers.py`
-- [ ] T010 [P] Implement environment-based runtime settings in `backend/src/config/settings.py`
+- [x] T010 [P] Implement environment-based runtime settings in `backend/src/config/settings.py`
 - [ ] T011 [P] Implement in-memory session repository for active conversations in `backend/src/chat/session_store.py`
 - [ ] T012 Implement baseline safety policy rules and sarcasm-level definitions in `backend/src/safety/policy.py`
 - [ ] T013 Implement fallback response helpers for timeout and provider errors in `backend/src/chat/fallbacks.py`
