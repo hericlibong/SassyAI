@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from .fallbacks import get_provider_error_fallback, get_timeout_fallback
 from .persona_loader import load_persona_assets
 from .session_store import ChatSession, InMemorySessionStore
-from ..llm.providers import ProviderRegistry, ProviderRequest
+from ..llm.providers import ProviderMessage, ProviderRegistry, ProviderRequest
 from ..safety.policy import evaluate_safety, get_sarcasm_instruction
 
 
@@ -85,6 +85,12 @@ class ChatService:
             prompt=prompt,
             system_prompt=persona_assets["system_prompt"],
             sarcasm_level=sarcasm_level,
+            few_shot_examples=persona_assets["few_shot_examples"],
+            conversation=tuple(
+                ProviderMessage(role=item.role, content=item.content)
+                for item in session.messages[:-1]
+            ),
+            latest_user_message=message,
         )
         return provider.generate(request)
 

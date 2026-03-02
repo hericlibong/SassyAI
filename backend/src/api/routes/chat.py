@@ -14,7 +14,11 @@ _settings = load_settings()
 _session_store = InMemorySessionStore()
 _provider_registry = ProviderRegistry()
 _provider_registry.register(
-    OpenAIProvider(timeout_seconds=_settings.provider_timeout_seconds),
+    OpenAIProvider(
+        timeout_seconds=_settings.provider_timeout_seconds,
+        model_name=_settings.model_name,
+        api_key=_settings.provider_api_key,
+    ),
 )
 _chat_service = ChatService(
     session_store=_session_store,

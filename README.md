@@ -70,6 +70,33 @@ export SASSYAI_OPENAI_API_KEY=your-provider-key
 
 The MVP expects the persona files to remain versioned in `backend/persona/`.
 
+Example `.env` for local work:
+
+```bash
+SASSYAI_LLM_PROVIDER=openai
+SASSYAI_MODEL_NAME=gpt-4o-mini
+SASSYAI_PROVIDER_TIMEOUT_SECONDS=10
+SASSYAI_OPENAI_API_KEY=replace-me
+```
+
+### V2 MVP Run Local
+
+Run the backend API:
+
+```bash
+cd backend
+uvicorn src.api.app:app --host 127.0.0.1 --port 8000 --reload
+```
+
+Run the frontend static app from the repo root (any simple local server works):
+
+```bash
+cd frontend/src
+python -m http.server 5173 --bind 127.0.0.1
+```
+
+Then open `http://127.0.0.1:5173/index.html` in your browser.
+
 ## Launching the Legacy CLI (Deprecated)
 
 To start the application, run the following command:

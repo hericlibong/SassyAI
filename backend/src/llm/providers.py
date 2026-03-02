@@ -3,10 +3,19 @@ from typing import Protocol
 
 
 @dataclass(frozen=True)
+class ProviderMessage:
+    role: str
+    content: str
+
+
+@dataclass(frozen=True)
 class ProviderRequest:
     prompt: str
     system_prompt: str
     sarcasm_level: str
+    few_shot_examples: str = ""
+    conversation: tuple[ProviderMessage, ...] = ()
+    latest_user_message: str = ""
 
 
 class ProviderAdapter(Protocol):
