@@ -1,6 +1,7 @@
 # remplir .gitignore 
 __pycache__/
 .env
+backend/.env
 .vscode/
 .idea/
 .DS_Store
