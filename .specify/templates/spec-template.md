@@ -100,27 +100,6 @@
 - **[Entity 1]**: [What it represents, key attributes without implementation]
 - **[Entity 2]**: [What it represents, relationships to other entities]
 
-## Constitution Alignment *(mandatory)*
-
-### Web Product Scope Impact
-
-- Frontend chat UX impact: [List chat interface changes or state "None"]
-- Backend chat API impact: [List endpoint/contract changes or state "None"]
-- CLI impact: [State "None" for all new work unless explicit deprecation/migration task]
-
-### Persona Prompt Governance
-
-- Prompt assets updated: [List versioned system prompt/example files]
-- Persona consistency checks: [How all chat paths use the canonical persona source]
-- Sarcasm calibration plan: [How low/medium/high (or equivalent) behavior is defined and tested]
-
-### Safety, Provider, and Reliability
-
-- Safety handling: [How unsafe responses are refused or neutralized]
-- Provider abstraction impact: [Adapter interface, providers affected, env-var configuration]
-- Failure behavior: [Timeout/error handling and safe fallback message behavior]
-- Observability plan: [Latency + provider error logs, secret redaction, no full prompt logging by default]
-
 ## Success Criteria *(mandatory)*
 
 <!--

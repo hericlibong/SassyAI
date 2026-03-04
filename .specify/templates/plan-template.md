@@ -31,20 +31,7 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-- **Web Scope Gate**: Confirm the feature targets web chat UX + backend API and does not add new
-  CLI product surface.
-- **Persona Source Gate**: Identify persona system prompt/example updates and confirm prompt assets
-  are versioned in-repo.
-- **Safety Calibration Gate**: Define sarcasm level behavior and refusal/neutralization handling for
-  unsafe content.
-- **Provider Abstraction Gate**: Route LLM calls through provider adapters with env-var
-  configuration, not provider-specific handlers.
-- **Reliability/Observability Gate**: Define timeout/error fallback behavior plus latency/provider
-  error logging with no secrets or full prompts by default.
-- **Test Gate**: Define failing-first tests for persona policy, provider adapter behavior, and API
-  chat flow.
-- **Minimal Architecture Gate**: Keep one backend service + one frontend UI unless complexity is
-  explicitly justified.
+[Gates determined based on constitution file]
 
 ## Project Structure
 
@@ -69,34 +56,34 @@ specs/[###-feature]/
 -->
 
 ```text
-# [REMOVE IF UNUSED] Option 1: Web chatbot (DEFAULT for SassyAI V2)
-backend/
-├── src/
-│   ├── api/
-│   ├── chat/
-│   ├── llm/
-│   └── safety/
-└── tests/
-
-frontend/
-├── src/
-│   ├── chat/
-│   ├── components/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 2: Single project
+# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
 src/
-├── api/
-├── chat/
-├── llm/
-└── safety/
+├── models/
+├── services/
+├── cli/
+└── lib/
+
 tests/
 ├── contract/
 ├── integration/
 └── unit/
 
-# [REMOVE IF UNUSED] Option 3: Mobile + API (non-default)
+# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
+backend/
+├── src/
+│   ├── models/
+│   ├── services/
+│   └── api/
+└── tests/
+
+frontend/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── services/
+└── tests/
+
+# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
 api/
 └── [same as backend above]
 

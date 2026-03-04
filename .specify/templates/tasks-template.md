@@ -8,7 +8,7 @@ description: "Task list template for feature implementation"
 **Input**: Design documents from `/specs/[###-feature-name]/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
-**Tests**: Include test tasks for every user story. Tests are REQUIRED by the constitution.
+**Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
@@ -20,10 +20,10 @@ description: "Task list template for feature implementation"
 
 ## Path Conventions
 
-- **Web chatbot (default)**: `backend/src/`, `frontend/src/`
 - **Single project**: `src/`, `tests/` at repository root
+- **Web app**: `backend/src/`, `frontend/src/`
 - **Mobile**: `api/src/`, `ios/src/` or `android/src/`
-- Paths shown below assume web chatbot structure - adjust based on plan.md structure
+- Paths shown below assume single project - adjust based on plan.md structure
 
 <!-- 
   ============================================================================
@@ -62,12 +62,12 @@ description: "Task list template for feature implementation"
 
 Examples of foundational tasks (adjust based on your project):
 
-- [ ] T004 Define/update shared chat contracts (API schemas, message types, safety states)
-- [ ] T005 [P] Add versioned persona prompt/example assets and loader wiring
-- [ ] T006 [P] Implement provider adapter interface and env-based provider configuration
-- [ ] T007 Implement safety calibration/refusal helpers used across chat flows
-- [ ] T008 Configure timeout handling, fallback messaging, and structured error handling
-- [ ] T009 Set up observability for latency/provider errors with redaction defaults
+- [ ] T004 Setup database schema and migrations framework
+- [ ] T005 [P] Implement authentication/authorization framework
+- [ ] T006 [P] Setup API routing and middleware structure
+- [ ] T007 Create base models/entities that all stories depend on
+- [ ] T008 Configure error handling and logging infrastructure
+- [ ] T009 Setup environment configuration management
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -79,21 +79,21 @@ Examples of foundational tasks (adjust based on your project):
 
 **Independent Test**: [How to verify this story works on its own]
 
-### Tests for User Story 1 (REQUIRED) ⚠️
+### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
 - [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T011 [P] [US1] API integration test for main chat journey in tests/integration/test_[name].py
-- [ ] T012 [P] [US1] Persona policy test in tests/unit/test_persona_policy_[name].py
+- [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
 
 ### Implementation for User Story 1
 
-- [ ] T013 [P] [US1] Implement backend chat handler in backend/src/chat/[file].py
-- [ ] T014 [P] [US1] Implement frontend chat interaction in frontend/src/chat/[file].tsx
-- [ ] T015 [US1] Wire API endpoint in backend/src/api/[file].py (depends on T013)
-- [ ] T016 [US1] Add fallback/timeout behavior and user-safe error responses
-- [ ] T017 [US1] Add latency/provider-error logging without secrets/prompt dumps
+- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
+- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
+- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
+- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T016 [US1] Add validation and error handling
+- [ ] T017 [US1] Add logging for user story 1 operations
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -105,17 +105,17 @@ Examples of foundational tasks (adjust based on your project):
 
 **Independent Test**: [How to verify this story works on its own]
 
-### Tests for User Story 2 (REQUIRED) ⚠️
+### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
 
 - [ ] T018 [P] [US2] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T019 [P] [US2] Provider adapter test in tests/unit/test_provider_adapter_[name].py
+- [ ] T019 [P] [US2] Integration test for [user journey] in tests/integration/test_[name].py
 
 ### Implementation for User Story 2
 
-- [ ] T020 [P] [US2] Implement/update provider adapter in backend/src/llm/[provider_adapter].py
-- [ ] T021 [US2] Add provider selection config in backend/src/config/[file].py
-- [ ] T022 [US2] Implement provider-specific behavior in backend/src/chat/[file].py
-- [ ] T023 [US2] Integrate provider flow with User Story 1 chat API/UI components (if needed)
+- [ ] T020 [P] [US2] Create [Entity] model in src/models/[entity].py
+- [ ] T021 [US2] Implement [Service] in src/services/[service].py
+- [ ] T022 [US2] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T023 [US2] Integrate with User Story 1 components (if needed)
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -127,16 +127,16 @@ Examples of foundational tasks (adjust based on your project):
 
 **Independent Test**: [How to verify this story works on its own]
 
-### Tests for User Story 3 (REQUIRED) ⚠️
+### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
 - [ ] T024 [P] [US3] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T025 [P] [US3] Safety calibration/refusal integration test in tests/integration/test_[name].py
+- [ ] T025 [P] [US3] Integration test for [user journey] in tests/integration/test_[name].py
 
 ### Implementation for User Story 3
 
-- [ ] T026 [P] [US3] Implement safety calibration logic in backend/src/safety/[file].py
-- [ ] T027 [US3] Implement refusal/neutralization behavior in backend/src/chat/[file].py
-- [ ] T028 [US3] Implement frontend UX messaging for safety/fallback states in frontend/src/chat/[file].tsx
+- [ ] T026 [P] [US3] Create [Entity] model in src/models/[entity].py
+- [ ] T027 [US3] Implement [Service] in src/services/[service].py
+- [ ] T028 [US3] Implement [endpoint/feature] in src/[location]/[file].py
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -153,7 +153,7 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] TXXX [P] Documentation updates in docs/
 - [ ] TXXX Code cleanup and refactoring
 - [ ] TXXX Performance optimization across all stories
-- [ ] TXXX [P] Additional unit/regression tests in tests/unit/
+- [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
 - [ ] TXXX Security hardening
 - [ ] TXXX Run quickstart.md validation
 
@@ -178,9 +178,9 @@ Examples of foundational tasks (adjust based on your project):
 
 ### Within Each User Story
 
-- Tests MUST be written and FAIL before implementation
-- Persona/provider/safety logic before endpoint wiring
-- Backend endpoint behavior before frontend integration polish
+- Tests (if included) MUST be written and FAIL before implementation
+- Models before services
+- Services before endpoints
 - Core implementation before integration
 - Story complete before moving to next priority
 
@@ -190,7 +190,7 @@ Examples of foundational tasks (adjust based on your project):
 - All Foundational tasks marked [P] can run in parallel (within Phase 2)
 - Once Foundational phase completes, all user stories can start in parallel (if team capacity allows)
 - All tests for a user story marked [P] can run in parallel
-- Independent backend/frontend tasks within a story marked [P] can run in parallel
+- Models within a story marked [P] can run in parallel
 - Different user stories can be worked on in parallel by different team members
 
 ---
@@ -198,14 +198,13 @@ Examples of foundational tasks (adjust based on your project):
 ## Parallel Example: User Story 1
 
 ```bash
-# Launch all tests for User Story 1 together:
+# Launch all tests for User Story 1 together (if tests requested):
 Task: "Contract test for [endpoint] in tests/contract/test_[name].py"
-Task: "API integration test for [user journey] in tests/integration/test_[name].py"
-Task: "Persona policy test in tests/unit/test_persona_policy_[name].py"
+Task: "Integration test for [user journey] in tests/integration/test_[name].py"
 
-# Launch core implementation tasks for User Story 1 together:
-Task: "Implement backend chat handler in backend/src/chat/[file].py"
-Task: "Implement frontend chat interaction in frontend/src/chat/[file].tsx"
+# Launch all models for User Story 1 together:
+Task: "Create [Entity1] model in src/models/[entity1].py"
+Task: "Create [Entity2] model in src/models/[entity2].py"
 ```
 
 ---
@@ -247,7 +246,6 @@ With multiple developers:
 - [Story] label maps task to specific user story for traceability
 - Each user story should be independently completable and testable
 - Verify tests fail before implementing
-- Ensure API flow, persona policy, and provider adapter tests pass before requesting review
 - Commit after each task or logical group
 - Stop at any checkpoint to validate story independently
 - Avoid: vague tasks, same file conflicts, cross-story dependencies that break independence
