@@ -1,6 +1,6 @@
 # Feature Specification: Character UI Typing Upgrade
 
-**Feature Branch**: `001-character-ui-typing`  
+**Feature Branch**: `002-character-ui-typing`  
 **Created**: 2026-03-04  
 **Status**: Draft  
 **Input**: User description: "Upgrade the frontend chat UI to a character-driven Option B portfolio look, and add word-by-word typing reveal for AI replies (client-side simulation, no backend streaming). Keep `/api/chat` contract unchanged, keep single-page MVP constraints (no auth, no DB, in-memory only), add typing indicator + skip, quick prompt chips, AI message copy, reset chat, classification status badge, and improve FR/EN response-language consistency."
