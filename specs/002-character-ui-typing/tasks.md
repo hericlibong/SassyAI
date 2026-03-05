@@ -1,3 +1,6 @@
+
+
+
 # Tasks: Character UI Typing Upgrade
 
 **Input**: Design documents from `/specs/002-character-ui-typing/`  
