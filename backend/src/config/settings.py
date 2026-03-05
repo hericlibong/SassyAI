@@ -1,5 +1,6 @@
 import os
 from dataclasses import dataclass
+from pathlib import Path
 
 
 DEFAULT_PROVIDER = "openai"
@@ -15,7 +16,24 @@ class Settings:
     provider_api_key: str | None
 
 
+def _load_backend_dotenv_defaults() -> None:
+    dotenv_path = Path(__file__).resolve().parents[2] / ".env"
+    if not dotenv_path.is_file():
+        return
+
+    for raw_line in dotenv_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", maxsplit=1)
+        key = key.strip()
+        if not key:
+            continue
+        os.environ.setdefault(key, value.strip())
+
+
 def load_settings() -> Settings:
+    _load_backend_dotenv_defaults()
     provider = os.getenv("SASSYAI_LLM_PROVIDER", DEFAULT_PROVIDER).strip() or DEFAULT_PROVIDER
     model_name = os.getenv("SASSYAI_MODEL_NAME", DEFAULT_MODEL).strip() or DEFAULT_MODEL
     timeout_raw = os.getenv(
