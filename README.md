@@ -1,265 +1,65 @@
-# SassyAI - The Sarcastic AI Assistant
+# SassyAI V2 — The Sarcastic Web Chatbot (LLM)
 
 <p align="center">
-   <img src="media/sassy_ai_picture.png" alt="SassyAI logo" />
+  <img src="media/sassy_ai_picture.png" alt="SassyAI" width="520" />
 </p>
 
-## Introduction
-
-SassyAI is a sarcastic assistant designed to answer questions with witty, snarky, and ironic remarks. This project was developed as part of the **Amazon Q Developer - Quack the Code** challenge. The goal is to demonstrate the ability to integrate Amazon Q to generate automated and sarcastic responses while providing an interactive experience via a command-line interface (CLI).
-
-> V2 direction (active): SassyAI is being rewritten as a web LLM chatbot with one frontend chat UI
-> and one backend chat service. The CLI is deprecated and out of scope for new product work under
-> `.specify/memory/constitution.md`.
-
-## Features
-
-* Sarcastic responses on various themes: general, code, philosophy, food, artificial intelligence, sports, politics, nerd culture, dark humor, and TV series.
-* Dynamic theme management via Amazon Q, with automatic integration of new responses and themes.
-* Subcategory management for complex themes (e.g., sports, nerd culture, TV series) with accurate detection of context.
-* Interactive command-line session with built-in commands to change themes, display help, view stats, and exit the session.
-* Visual enhancements using the **Rich** library for colorful and immersive user experience.
-* Reflection effect with random messages to simulate AI thinking.
-* Various output messages to keep the interaction light and humorous.
-
-## Installation
-
-### Clone the project
-
-```bash
-git clone https://github.com/hericlibong/SassyAI.git
-cd SassyAI
-```
-
-### Create virtual environment
-
-```bash
-python3.12 -m venv venv
-```
-
-### Activate environment
-
-```bash
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-### Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### V2 MVP Backend Setup
-
-For the web chatbot MVP backend, install the dedicated backend dependencies:
-
-```bash
-pip install -r backend/requirements.txt
-```
-
-### V2 MVP Environment Variables
-
-Set the provider configuration before running the backend service:
-
-```bash
-export SASSYAI_LLM_PROVIDER=openai
-export SASSYAI_MODEL_NAME=gpt-4o-mini
-export SASSYAI_PROVIDER_TIMEOUT_SECONDS=10
-export SASSYAI_OPENAI_API_KEY=your-provider-key
-```
-
-The MVP expects the persona files to remain versioned in `backend/persona/`.
-
-Example `.env` for local work:
-
-```bash
-SASSYAI_LLM_PROVIDER=openai
-SASSYAI_MODEL_NAME=gpt-4o-mini
-SASSYAI_PROVIDER_TIMEOUT_SECONDS=10
-SASSYAI_OPENAI_API_KEY=replace-me
-```
-
-### V2 MVP Run Local
-
-Run the backend API:
-
-```bash
-cd backend
-uvicorn src.api.app:app --host 127.0.0.1 --port 8000 --reload
-```
-
-Run the frontend static app from the repo root (any simple local server works):
-
-```bash
-cd frontend/src
-python -m http.server 5173 --bind 127.0.0.1
-```
-
-Then open `http://127.0.0.1:5173/index.html` in your browser.
-
-The current V2 chat UI includes:
-- Option B styled single-page chat layout.
-- Typing indicator, word-by-word assistant reveal, and a **Skip** action.
-- Quick prompt chips, per-message **Copy**, **Reset chat**, and classification badge display.
-
-## Launching the Legacy CLI (Deprecated)
-
-To start the application, run the following command:
-
-```bash
-python sassy_ai/main_cli.py
-```
-
-or
-
-```bash
-cd sassy_ai
-python main_cli.py
-```
-
-The application will start in interactive mode, allowing you to ask questions or change the theme
-during the session. This CLI flow is legacy and kept for reference during the V2 web rewrite.
-
-### CLI Commands
-
-* `:help` - Display help.
-* `:themes` - List available themes.
-* `:mode <theme>` - Change theme.
-* `:random` - Switch to a random theme.
-* `:stats` - Show theme usage statistics.
-* `:exit` - Exit the session.
-
-### Example Usage
-
-```bash
-python sassy_ai/main_cli.py
-```
-
-* Type your question directly:
-
-```
-🗨️ [general] > What is the meaning of life?
-```
-
-* Change the theme:
-
-```
-🗨️ [general] > :mode code
-```
-
-* View stats:
-
-```
-🗨️ [code] > :stats
-```
-
-* Exit the application:
-
-```
-🗨️ [code] > :exit
-```
-
-
-
-### 🎬 Demo Video
-{% embed https://www.youtube.com/watch?v=OYcGW34V-7M %}
-
-
-## Logging
-
-### Location
-
-Logs are stored in the following directory:
-
-```
-sassy_ai/logs/amazon_q_log.md
-```
-
-### Content
-
-The log file contains detailed information about:
-
-- **Prompt submissions:** Records of prompts sent to Amazon Q.
-- **Integration details:** Summarizes the automatic updates made to `patterns.json`, `responses.json`, `engine.py`, and `main_cli.py`.
-- **Errors:** Tracks any issues during response generation or pattern creation.
-
-### Usage
-
-The logs help to:
-
-- **Track changes:** Understand how themes and responses were integrated.
-- **Debug issues:** Identify errors in the automatic integration process.
-- **Document updates:** Keep a trace of all improvements and new features.
-
-### Example Log Entry
-
-```
-Date: 2025-05-10
-Theme: Dark Humor
-Status: Success
-Details:
-   - Responses added to responses.json
-   - Patterns updated in patterns.json
-   - Theme details integrated in main_cli.py
-   - Intent mapping completed in engine.py
-```
-
-
-
-## Customization
-
-You can enrich existing themes or add new ones via Amazon Q. To add a custom theme, follow these steps:
-
-1. **Send a prompt to Amazon Q** to generate sarcastic responses.
-
-   * Example of a prompt for a new theme "dark humor":
-
-     ```
-     Act as a sarcastic AI assistant who embraces dark humor. Generate 5 witty, cynical responses on mortality, existential dread, and human insignificance.
-     ```
-
-2. **Integration (automatic)**:
-
-   * Amazon Q will automatically update the `engine.py`, `responses.json`, and `patterns.json` files with the new responses.
-   * Subcategories will be dynamically created if necessary (e.g., sports, nerd culture).
-
-3. **Manual Adjustment**:
-
-   * Update the `THEME_DETAILS` dictionary in `main_cli.py` to include the new theme, like this:
-
-     ```python
-     THEME_DETAILS = {
-         "general": {"prompt": "What's the capital of France?", "color": "cyan", "emoji": "💡"},
-         "code": {"prompt": "Write a Python function to sort a list.", "color": "green", "emoji": "💻"},
-         "dark_humor": {"prompt": "What happens after we die?", "color": "bright_black", "emoji": "💀"}
-     }
-     ```
-
-## Tests
-
-Unit tests are performed using Pytest. To run them, execute:
-
-```bash
-pytest --cov=sassy_ai
-```
-
-Test coverage will be displayed at the end of the run.
-
-### Test Coverage
-
-The current test coverage is approximately 90%. Some edge cases are still under investigation, especially those involving complex subcategory handling.
-
-## Contribution
-
-Contributions are welcome. If you have ideas to enhance SassyAI, feel free to submit Pull Requests or Issues.
-Contributors MUST follow the engineering governance defined in `.specify/memory/constitution.md`,
-including V2 web scope, persona prompt governance, provider abstraction, and safety requirements.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Notes
-
-* This project is designed for the Amazon Q Developer - Quack the Code challenge.
-* The assistant's sarcastic and mocking responses are intentional to enhance the humorous interaction.
+SassyAI V2 is a **single-page web chatbot** with a sarcastic personality, powered by an LLM (OpenAI) and a versioned persona. It’s built as a clean portfolio project: **simple UI, real model, real UX polish**.
+
+---
+
+## What is SassyAI V2?
+
+- **Web chat UI** (frontend static app) + **FastAPI backend**
+- **LLM-backed sarcasm** with selectable levels: low / medium / high
+- **Versioned persona** (`backend/persona/`) to control tone and consistency
+- Built-in **safety**, **fallback**, and **provider abstraction**
+
+---
+
+## Features (V2)
+
+### Chat experience (UI Option B)
+- Product-style “character” UI (header + chips + clean transcript)
+- Typing indicator while waiting for the backend
+- Word-by-word assistant reveal with **Skip**
+- Quick prompt chips (4–6)
+- Per-message **Copy**
+- **Reset chat**
+- Classification badge per assistant message (normal / fallback / etc.)
+- Brand logo in header + assistant avatar in chat
+
+### Backend (FastAPI)
+- `/api/chat` endpoint (simple JSON contract)
+- Provider abstraction (registry)
+- OpenAI **Responses API** integration (HTTP via `httpx`)
+- Safety policy short-circuit (refuse/neutralize without calling the model)
+- Fallback behavior on provider errors/timeouts
+
+---
+
+## Architecture
+
+```text
+backend/
+  src/
+    api/            # FastAPI app + routes
+    chat/           # ChatService, session store, prompt assembly
+    llm/            # Provider registry + OpenAI provider
+    safety/         # Refuse/neutralize policy
+  persona/
+    system_prompt.md
+    few_shot_examples.yaml
+
+frontend/
+  src/
+    index.html
+    styles.css
+    chat/
+      chat-app.js
+      reveal-controller.js
+      transcript-state.js
+    services/
+      chat_api.js
+    assets/
+      sassy_pic.png
