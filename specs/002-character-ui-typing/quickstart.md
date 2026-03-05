@@ -36,3 +36,10 @@
    - `cd /home/hericdev/CHALLENGES/backend`
    - `pytest`
 2. Confirm no contract regressions on `/api/chat`.
+
+## Validation Log (2026-03-05)
+- Static frontend host check passed (`python -m http.server` + `curl /index.html`).
+- Backend API smoke check passed (`POST /api/chat` returned 200 with unchanged response fields).
+- Backend regression check passed (`cd backend && pytest -q` -> `18 passed`).
+- No contract mismatch detected.
+- Browser-only visual confirmation for reveal cadence/Skip interaction remains a manual QA step.

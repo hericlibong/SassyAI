@@ -97,6 +97,11 @@ python -m http.server 5173 --bind 127.0.0.1
 
 Then open `http://127.0.0.1:5173/index.html` in your browser.
 
+The current V2 chat UI includes:
+- Option B styled single-page chat layout.
+- Typing indicator, word-by-word assistant reveal, and a **Skip** action.
+- Quick prompt chips, per-message **Copy**, **Reset chat**, and classification badge display.
+
 ## Launching the Legacy CLI (Deprecated)
 
 To start the application, run the following command:

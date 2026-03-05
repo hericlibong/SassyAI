@@ -26,3 +26,5 @@ async def test_chat_endpoint_exists_for_contract() -> None:
             "sarcasm_level",
             "message_count",
         }.issubset(payload)
+        assert payload["classification"] in {"normal", "refused", "neutralized", "fallback"}
+        assert isinstance(payload["reply"], str) and payload["reply"].strip()
