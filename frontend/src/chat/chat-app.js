@@ -1,5 +1,6 @@
 import { sendChatMessage } from "../services/chat_api.js";
 import { createRevealController } from "./reveal-controller.js";
+import { renderSafeMarkdown } from "./render-markdown.js";
 import { createTranscriptState } from "./transcript-state.js";
 
 const BADGE_LABELS = {
@@ -117,6 +118,9 @@ export function mountChatApp(root) {
       typing.className = "typing-indicator";
       typing.textContent = "SassyAI is typing";
       body.appendChild(typing);
+    } else if (entry.role === "assistant" && entry.state === "complete") {
+      body.classList.add("chat-markdown");
+      body.innerHTML = renderSafeMarkdown(entry.displayText);
     } else {
       body.textContent = entry.displayText;
     }

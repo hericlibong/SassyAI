@@ -201,6 +201,25 @@ body.sassyai-ready {
   line-height: 1.45;
 }
 
+.chat-markdown p,
+.chat-markdown ul,
+.chat-markdown ol {
+  margin: 0 0 0.5rem;
+}
+
+.chat-markdown ul,
+.chat-markdown ol {
+  padding-left: 1.2rem;
+  list-style-position: outside;
+}
+
+.chat-markdown code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: rgba(148, 170, 255, 0.18);
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
 .typing-indicator {
   color: var(--muted);
   position: relative;
