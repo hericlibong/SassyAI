@@ -54,6 +54,19 @@ body.sassyai-ready {
   align-items: center;
 }
 
+.chat-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
 .chat-header h1 {
   margin: 0;
   font-size: 1.15rem;
@@ -171,6 +184,19 @@ body.sassyai-ready {
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.03em;
+}
+
+.assistant-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.assistant-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  object-fit: cover;
 }
 
 .chat-status-badge {

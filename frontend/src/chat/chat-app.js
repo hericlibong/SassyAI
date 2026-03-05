@@ -26,9 +26,12 @@ export function mountChatApp(root) {
   root.innerHTML = `
     <section class="chat-shell chat-shell-option-b">
       <header class="chat-header">
-        <div>
-          <h1>SassyAI V2</h1>
-          <p>Character chat, one session, zero persistence.</p>
+        <div class="chat-brand">
+          <img class="brand-logo" src="./assets/sassy_pic.png" alt="SassyAI logo" />
+          <div>
+            <h1>SassyAI V2</h1>
+            <p>Character chat, one session, zero persistence.</p>
+          </div>
         </div>
         <div class="chat-header-controls">
           <label class="chat-control">
@@ -98,7 +101,18 @@ export function mountChatApp(root) {
 
     const roleLabel = document.createElement("span");
     roleLabel.className = "chat-message-role";
-    roleLabel.textContent = entry.role === "user" ? "You" : "SassyAI";
+    if (entry.role === "assistant") {
+      roleLabel.classList.add("assistant-role");
+      const avatar = document.createElement("img");
+      avatar.className = "assistant-avatar";
+      avatar.src = "./assets/sassy_pic.png";
+      avatar.alt = "";
+      avatar.setAttribute("aria-hidden", "true");
+      roleLabel.appendChild(avatar);
+      roleLabel.append("SassyAI");
+    } else {
+      roleLabel.textContent = "You";
+    }
     messageHeader.appendChild(roleLabel);
 
     if (entry.role === "assistant") {
